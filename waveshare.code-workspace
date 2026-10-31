@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "main_mqtt_all"
+    },
+    {
+      "path": "main_wifi_app"
+    },
+    {
+      "path": "main_wifi_sta"
+    }
+  ]
+}
