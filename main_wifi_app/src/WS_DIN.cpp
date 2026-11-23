@@ -111,8 +111,8 @@ void DINTask(void *parameter) {
   else
     DIN_Data_Old = 0xFF;
   while(1){
+    DIN_Read_CHxs();                      // Always refresh DIN_Flag so the web monitor stays accurate, even if immediate dout control is disabled
     if(Dout_Immediate_Enable){
-      DIN_Read_CHxs();
       if(DIN_Data_Old != DIN_Data){
         if(DIN_Inverse_Enable)
           Dout_Immediate_CHxs(~DIN_Data , DIN_Mode_Trigger);

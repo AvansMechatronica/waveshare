@@ -10,6 +10,7 @@
 #include "WS_Information.h"
 #include "WS_Struct.h"
 #include "WS_Dout.h"
+#include "WS_DIN.h"
 #include "WS_RTC.h"
 #include "WS_RS485.h"
 #include "WS_CAN.h"
@@ -17,6 +18,7 @@
 extern char ipStr[16];
 void handleRoot();
 void handleGetData();
+void handleGetDinData();
 void handleSwitch(uint8_t ledNumber);
 
 void handleSwitch1();

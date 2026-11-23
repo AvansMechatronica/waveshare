@@ -1,9 +1,9 @@
 #include "WS_Bluetooth.h"
 /*
-数据          ：控制数字输出（数据对应数字通道，0x31 为通道1，0x32 为通道2，0x39 为全低， 0x30 为全高）
-06 +数据      ：控制 RS485 发送数据控制外部连接的 Modbus RTU Relay 的继电器通道（数据对应Modbus RTU Relay 的继电器通道，0x01 为继电器1，0x02 为继电器2，0x39 为继电器全开， 0x3A 为继电器全关）
-0A 0B + 数据  : RS485 发送数据（0A 0C + 多个字节数据，实际发送后面的数据）
-0A 0C + 数据  : CAN 发送数据 (0A 0C + 4个字节ID + 一个字节帧类型（0x01扩展帧，0x00标准帧） + 多个字节数据，实际根据前方配置设置 CAN 参数后发送后面的数据)
+Data         : Controls digital output (the data corresponds to a digital channel: 0x31 = channel 1, 0x32 = channel 2, 0x39 = all low, 0x30 = all high)
+06 + Data    : Controls RS485 to send data that drives the relay channel of an externally connected Modbus RTU Relay (the data corresponds to the Modbus RTU Relay's relay channel: 0x01 = relay 1, 0x02 = relay 2, 0x39 = all relays on, 0x3A = all relays off)
+0A 0B + Data : RS485 send data (0A 0C + multiple bytes of data; the data after the prefix is sent as-is)
+0A 0C + Data : CAN send data (0A 0C + 4-byte ID + 1-byte frame type (0x01 = extended frame, 0x00 = standard frame) + multiple bytes of data; the CAN parameters are configured from the preceding fields, then the remaining data is sent)
 */
 BLEServer* pServer;                                                             // Used to represent a BLE server
 BLECharacteristic* pTxCharacteristic;
@@ -12,25 +12,24 @@ BLECharacteristic* pRxCharacteristic;
 /**********************************************************  Bluetooth   *********************************************************/
 
 class MyServerCallbacks : public BLEServerCallbacks {                           //By overriding the onConnect() and onDisconnect() functions
-    void onConnect(BLEServer* pServer) {                                        // When the Device is connected, "Device connected" is printed.
+    void onConnect(BLEServer* pServer, NimBLEConnInfo& connInfo) override {      // When the Device is connected, "Device connected" is printed.
     Serial.println("Device connected"); 
   }
 
-  void onDisconnect(BLEServer* pServer) {                                       // "Device disconnected" will be printed when the device is disconnected
+  void onDisconnect(BLEServer* pServer, NimBLEConnInfo& connInfo, int reason) override { // "Device disconnected" will be printed when the device is disconnected
     Serial.println("Device disconnected");
 
     BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();                 // Re-broadcast so that the device can query
     pAdvertising->addServiceUUID(SERVICE_UUID);                                 // Re-broadcast so that the device can query
-    pAdvertising->setScanResponse(true);                                        // Re-broadcast so that the device can query
-    pAdvertising->setMinPreferred(0x06);                                        // Re-broadcast so that the device can query 
-    pAdvertising->setMinPreferred(0x12);                                        // Re-broadcast so that the device can query 
+    pAdvertising->enableScanResponse(true);                                     // Re-broadcast so that the device can query
+    pAdvertising->setPreferredParams(0x06, 0x12);                               // Re-broadcast so that the device can query
     BLEDevice::startAdvertising();                                              // Re-broadcast so that the device can query 
     pRxCharacteristic->notify();                                                // Re-broadcast so that the device can query  
     pAdvertising->start();                                                      // Re-broadcast so that the device can query
   }
 };
 class MyRXCallback : public BLECharacteristicCallbacks {
-  void onWrite(BLECharacteristic* pCharacteristic) {                            // The onWrite function is called when the remote device sends data to your feature
+  void onWrite(BLECharacteristic* pCharacteristic, NimBLEConnInfo& connInfo) override { // The onWrite function is called when the remote device sends data to your feature
     String rxValue = pCharacteristic->getValue();
     if (!rxValue.isEmpty()) {
       // The received data rxValue is processed here
@@ -102,20 +101,18 @@ void Bluetooth_Init()
   BLEService* pService = pServer->createService(SERVICE_UUID);                  
   pTxCharacteristic = pService->createCharacteristic(
                                     TX_CHARACTERISTIC_UUID,
-                                    BLECharacteristic:: PROPERTY_READ);         // The eigenvalues are readable and can be read by remote devices
+                                    NIMBLE_PROPERTY::READ);                     // The eigenvalues are readable and can be read by remote devices
   pRxCharacteristic = pService->createCharacteristic(
                                     RX_CHARACTERISTIC_UUID,
-                                    BLECharacteristic::PROPERTY_WRITE);         // The eigenvalues are writable and can be written to by remote devices
+                                    NIMBLE_PROPERTY::WRITE);                    // The eigenvalues are writable and can be written to by remote devices
   pRxCharacteristic->setCallbacks(new MyRXCallback());
 
   pRxCharacteristic->setValue("Successfully Connect To ESP32-S3-POE-ETH-8DI-8DO");      
-  pService->start();   
 
   BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();                   
   pAdvertising->addServiceUUID(SERVICE_UUID);                                   
-  pAdvertising->setScanResponse(true);                                          
-  pAdvertising->setMinPreferred(0x06);                                          
-  pAdvertising->setMinPreferred(0x12);                                          
+  pAdvertising->enableScanResponse(true);                                       
+  pAdvertising->setPreferredParams(0x06, 0x12);                                 
   BLEDevice::startAdvertising();                                                
   pRxCharacteristic->notify();                                                    
   pAdvertising->start();

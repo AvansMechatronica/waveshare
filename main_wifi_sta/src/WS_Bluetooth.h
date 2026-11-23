@@ -1,9 +1,7 @@
 #pragma once
 
 #include <HardwareSerial.h>     // Reference the ESP32 built-in serial port library
-#include <BLEDevice.h>
-#include <BLEUtils.h>
-#include <BLEServer.h>
+#include <NimBLEDevice.h>       // NimBLE-Arduino: drop-in replacement for the classic Bluedroid BLE library
 #include "WS_GPIO.h"
 #include "WS_RS485.h"
 #include "WS_Information.h"

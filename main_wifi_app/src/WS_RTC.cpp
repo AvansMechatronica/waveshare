@@ -181,7 +181,7 @@ uint32_t calculate_repetition_gcd(void) {
         if (gcd == 0) {
           gcd = value;
         } else {
-          // 辗转相除法求最大公因数
+          // Euclidean algorithm to find the greatest common divisor
           uint32_t a = gcd, b = value;
           while (b != 0) {
             uint32_t temp = b;
@@ -457,13 +457,13 @@ void TimerEvent_Serial_Set(datetime_t time, Web_Receive* SerialData, Repetition_
       //   len += snprintf(Event_content + len, total_len - len, "&nbsp;&nbsp;&nbsp;&nbsp;CAN&nbsp;Send&nbsp;Data&nbsp;(char):\\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
     }   
     
-    char temp[SerialData->DataLength * 12 + 1] = {0};  // 每个字节最多4字符 "0xXX "，外加结尾'\0'
+    char temp[SerialData->DataLength * 12 + 1] = {0};  // Each byte takes up to 4 characters "0xXX ", plus the terminating '\0'
     if (SerialData->DataType == 1) {  // hex
       for (int i = 0; i < SerialData->DataLength; i++) {
         char hex_byte[6];
         snprintf(hex_byte, sizeof(hex_byte), "0x%02X ", SerialData->SerialData[i]);
         strcat(temp, hex_byte);
-        // 每10个字节添加换行和缩进
+        // Add a newline and indentation every 10 bytes
         if ((i + 1) % 10 == 0 && (i + 1) < SerialData->DataLength) {
             strcat(temp, "\\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
         }
@@ -529,7 +529,7 @@ void TimerEvent_Del(Timing_RTC event){
   Buzzer_Open_Time(700, 300); 
   printf("Example Delete an RTC event%d\r\n\r\n",event.Event_Number);
   uint8_t Event_Number = event.Event_Number - 1;
-  if (Events_State[Event_Number].Web_Data.SerialData) {                // 清除
+  if (Events_State[Event_Number].Web_Data.SerialData) {                // Clear
     free(Events_State[Event_Number].Web_Data.SerialData);
     Events_State[Event_Number].Web_Data.SerialData = NULL;
   }
