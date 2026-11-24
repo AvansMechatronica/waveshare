@@ -5,8 +5,8 @@
 const char *ssid = STASSID;                
 const char *password = STAPSK;               
 #else
-const char *ssid = "BirdsBoven";                
-const char *password = "Highway12!";   
+const char *ssid = "MyWifiAp";                
+const char *password = "my_wifi_password";   
 #endif
 
 char ipStr[16];
