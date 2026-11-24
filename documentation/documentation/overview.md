@@ -13,6 +13,45 @@ board. Het board is gebaseerd op de ESP32-S3-WROOM-1U-N16R8 module (16 MB flash,
 - micro-SD-kaartslot
 - RGB-led en zoemer
 
+```{figure} ../images/esp32-s3-poe-eth-8di-8do.png
+:alt: Waveshare ESP32-S3-POE-ETH-8DI-8DO
+:width: 70%
+
+Het ESP32-S3-POE-ETH-8DI-8DO board. Bron:
+[Waveshare documentatie](https://docs.waveshare.com/ESP32-S3-POE-ETH-8DI-8DO).
+```
+
+## Blokschema
+
+Het blokschema laat zien welke GPIO-pinnen van de ESP32-S3 met welke
+onderdelen verbonden zijn. Dezelfde pinnen staan in de headers van de
+[Library-referentie](library.md).
+
+```{figure} ../images/esp32-s3-poe-eth-8di-8do_block_diagram.png
+:alt: Blokschema van het ESP32-S3-POE-ETH-8DI-8DO board
+:width: 100%
+
+Blokschema met de GPIO-toewijzing. Bron:
+[Waveshare documentatie](https://docs.waveshare.com/ESP32-S3-POE-ETH-8DI-8DO).
+```
+
+| Onderdeel | Aansluiting | Library-module |
+| --- | --- | --- |
+| Digitale uitgangen 1–8 | TCA9554 EXIO1–EXIO8 (I²C) | `WS_Dout`, `WS_TCA9554PWR` |
+| Digitale ingangen 1–8 | GPIO 4–11 | `WS_DIN` |
+| I²C (TCA9554, RTC) | SDA GPIO 42, SCL GPIO 41 | `I2C_Driver` |
+| RTC PCF85063 | I²C, interrupt GPIO 40 | `WS_PCF85063`, `WS_RTC` |
+| RS485 | TX GPIO 17, RX GPIO 18, richting GPIO 21 | `WS_RS485` |
+| CAN | TX GPIO 2, RX GPIO 3 | `WS_CAN` |
+| W5500 Ethernet | INT 12, MOSI 13, MISO 14, SCLK 15, CS 16 | `WS_ETH` |
+| TF-kaart | D0 GPIO 45, CMD GPIO 47, CLK GPIO 48 | `WS_SD` |
+| RGB-led | GPIO 38 | `WS_GPIO` |
+| Zoemer | GPIO 46 | `WS_GPIO` |
+| BOOT-knop | GPIO 0 | |
+
+Meer informatie, zoals schema's, afmetingen en voorbeeldcode, vind je in de
+[Waveshare documentatie](https://docs.waveshare.com/ESP32-S3-POE-ETH-8DI-8DO).
+
 ## Opbouw van de workspace
 
 ```text

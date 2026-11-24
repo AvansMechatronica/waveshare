@@ -2,6 +2,8 @@
 
 ## Hardware
 
+- [Waveshare documentatie ESP32-S3-POE-ETH-8DI-8DO](https://docs.waveshare.com/ESP32-S3-POE-ETH-8DI-8DO)
+  (bron van de foto en het blokschema in deze documentatie)
 - [Waveshare ESP32-S3-POE-ETH-8DI-8DO productpagina](https://www.waveshare.com/esp32-s3-poe-eth-8di-8do.htm)
 - [Waveshare wiki ESP32-S3-POE-ETH-8DI-8DO](https://www.waveshare.com/wiki/ESP32-S3-POE-ETH-8DI-8DO)
 - [ESP32-S3 datasheet (Espressif)](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
