@@ -8,6 +8,45 @@
   of [PlatformIO Core](https://platformio.org/install/cli).
 - Toegang tot een WiFi-netwerk en/of Ethernet, afhankelijk van de gekozen firmware.
 
+## Repository clonen
+
+De broncode staat op GitHub:
+[AvansMechatronica/waveshare](https://github.com/AvansMechatronica/waveshare).
+
+::::{tab-set}
+
+:::{tab-item} Git (command line)
+```bash
+git clone https://github.com/AvansMechatronica/waveshare.git
+cd waveshare
+```
+:::
+
+:::{tab-item} VS Code
+1. Open het Command Palette (`Ctrl+Shift+P`) en kies **Git: Clone**.
+2. Plak `https://github.com/AvansMechatronica/waveshare.git`.
+3. Kies een map en open daarna de gekloonde repository.
+:::
+
+:::{tab-item} Zonder Git
+Download de code als ZIP via
+[Code → Download ZIP](https://github.com/AvansMechatronica/waveshare/archive/refs/heads/main.zip)
+en pak het bestand uit.
+:::
+
+::::
+
+:::{note}
+Clone altijd de volledige repository, en niet één projectmap. De projecten
+gebruiken de gedeelde map `libraries/`, die naast de projectmappen moet staan.
+:::
+
+Bijwerken naar de laatste versie:
+
+```bash
+git pull
+```
+
 ## Workspace openen
 
 Open `waveshare.code-workspace` in VS Code. Alle firmwareprojecten verschijnen dan
