@@ -27,9 +27,10 @@ environment. PlatformIO installs the dependencies declared in
 
 ## Configure
 
-1. Open `src/WS_Information.h`.
-2. Set the Wi-Fi network name and password, and configure the MQTT broker,
-   client ID, and publish/subscribe topics for your deployment.
+1. Set the Wi-Fi network name and password (`STASSID`, `STAPSK`) in
+   `src/wifi_app.h`.
+2. Configure the MQTT broker, client ID, and publish/subscribe topics in
+   `src/WS_MQTT.h` for your deployment.
 3. Do not commit real Wi-Fi passwords or MQTT credentials. Use test credentials
    for development, and rotate any credentials that have already been exposed.
 
@@ -103,10 +104,10 @@ Most are also declared in that module's header.
 
 ### Wi-Fi and web interface
 
-**`WS_WIFI.cpp`**
+**`wifi_app.cpp`**
 
 - `WIFI_Init()` starts `WifiStaTask()`. The task connects in Wi-Fi station mode
-  using the credentials in `WS_Information.h`, retries after connection
+  using the credentials in `wifi_app.h`, retries after connection
   failures, prints the assigned IP, and serves the web UI while connected.
 - `handleRoot()` serves the main output-control page. `handleGetData()` returns
   current output data. `handleSwitch()` and the `handleSwitch1()` through
@@ -142,7 +143,7 @@ printed on the serial monitor.
   serializes it, and publishes it to the configured publish topic.
 
 Broker address, port, client ID, and topic names are set in
-`WS_Information.h`.
+`WS_MQTT.h`.
 
 ### RS485 and CAN
 
@@ -251,8 +252,12 @@ using NTP and sets the onboard RTC.
 ## Project layout
 
 - `src/MAIN_MQTT_ALL.cpp` initializes the firmware modules.
-- `src/WS_*.cpp` and `src/WS_*.h` implement the board features and interfaces.
-- `src/WS_Information.h` contains network and MQTT configuration.
+- `src/wifi_app.cpp` and `src/wifi_app.h` handle Wi-Fi and the web interface;
+  `wifi_app.h` holds the Wi-Fi credentials.
+- `src/WS_MQTT.cpp` and `src/WS_MQTT.h` handle MQTT; `WS_MQTT.h` holds the
+  broker settings.
+- `../libraries/waveshare_board/` contains the shared board drivers
+  (`WS_*`, `I2C_Driver`) used by all projects in the workspace.
 - `include/` is for project-wide headers.
 - `lib/` is for project-specific libraries.
 - `test/` is the PlatformIO test directory.

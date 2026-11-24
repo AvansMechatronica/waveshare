@@ -26,7 +26,7 @@ directory available when building this project.
 
 ## Configure Wi-Fi
 
-Set `STASSID` and `STAPSK` in `src/WS_Information.h` to the Wi-Fi network name
+Set `STASSID` and `STAPSK` in `src/wifi_app.h` to the Wi-Fi network name
 and password the board should join. This firmware runs in Wi-Fi station mode;
 it does not create an access point. Do not publish or commit real network
 credentials.
@@ -62,7 +62,9 @@ connected.
 
 - `src/MAIN_WIFI_STA.cpp` initializes the board peripherals and network
   services.
-- `src/WS_*.cpp` and `src/WS_*.h` implement the individual board functions.
+- `src/wifi_app.cpp` and `src/wifi_app.h` handle Wi-Fi and the web interface.
+- `../libraries/waveshare_board/` contains the shared board drivers
+  (`WS_*`, `I2C_Driver`) used by all projects in the workspace.
 - `platformio.ini` defines the PlatformIO board, build settings, and
   dependencies.
 

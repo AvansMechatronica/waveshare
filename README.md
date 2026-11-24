@@ -13,6 +13,7 @@ interfaces.
 | [`main_mqtt_all/`](main_mqtt_all/) | Wi-Fi client and Ethernet | Adds MQTT connectivity alongside the web interface. Configure the broker, client, and topics before use. |
 | [`main_wifi_app/`](main_wifi_app/) | Wi-Fi access point | Hosts its own Wi-Fi network and web interface. Connect to the configured access point and open `http://192.168.4.1`. |
 | [`main_wifi_sta/`](main_wifi_sta/) | Wi-Fi client and Ethernet | Joins an existing Wi-Fi network and serves the web interface on the device's network address. |
+| [`main_wifi_template/`](main_wifi_template/) | Wi-Fi access point or client (selectable) | Starting point for new firmware: AP or STA mode and Wi-Fi settings are chosen in `platformio.ini`, and the web server serves an empty page. |
 
 The variants share board functionality such as eight digital inputs and
 outputs, RS485, CAN, Bluetooth LE, RTC scheduling, SD storage, and W5500
@@ -23,7 +24,11 @@ documented in each project's README.
 
 - [`waveshare.code-workspace`](waveshare.code-workspace) opens the three
   firmware projects together in Visual Studio Code.
-- [`libraries/`](libraries/) contains libraries shared by the projects.
+- [`documentation/`](documentation/) contains the Sphinx documentation that
+  is published to GitHub Pages, including a reference of the board library.
+- [`libraries/`](libraries/) contains libraries shared by the projects,
+  including `waveshare_board` with the board drivers (`WS_*`, `I2C_Driver`)
+  that every firmware project uses.
 - Each firmware project has its own `platformio.ini`, `src/`, and README.
   PlatformIO dependencies are resolved from that project's configuration.
 
@@ -52,9 +57,9 @@ projects. The serial monitor runs at 115200 baud. Replace `main_mqtt_all` with
 
 ## Configure before deployment
 
-- Review the selected project's `src/WS_Information.h` for network settings.
-  The station-mode projects need Wi-Fi credentials; the MQTT variant also
-  needs its broker settings.
+- Review the selected project's network settings: `src/wifi_app.h` for Wi-Fi
+  (or `platformio.ini` for `main_wifi_template`), and `src/WS_MQTT.h` for the
+  MQTT broker in `main_mqtt_all`.
 - The web interfaces can control physical outputs. Keep the device on a
   trusted network and do not expose it directly to the internet.
 - Do not commit real Wi-Fi or MQTT credentials.
@@ -65,3 +70,4 @@ instructions, and firmware details:
 - [MQTT firmware](main_mqtt_all/README.md)
 - [Wi-Fi access-point firmware](main_wifi_app/README.md)
 - [Wi-Fi station firmware](main_wifi_sta/README.md)
+- [Wi-Fi template firmware](main_wifi_template/README.md)

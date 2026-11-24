@@ -1,5 +1,5 @@
 #include <HardwareSerial.h>     // Reference the ESP32 built-in serial port library
-#include "WS_WIFI.h"
+#include "wifi_app.h"
 #include "WS_Bluetooth.h"
 #include "WS_GPIO.h"
 #include "WS_RS485.h"

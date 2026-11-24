@@ -26,7 +26,7 @@ Dependencies declared in `platformio.ini` are installed by PlatformIO.
 ## Configure and connect
 
 1. Before deployment, set the Wi-Fi access point name and password in
-   `src/WS_Information.h`. The repository contains default credentials; replace
+   `src/wifi_app.h` (`APSSID`, `APPSK`). The repository contains default credentials; replace
    them before using the firmware outside a trusted test environment.
 2. Build and upload the firmware using the commands below.
 3. Connect a phone or computer to the configured access point.
@@ -51,12 +51,9 @@ The serial monitor is configured for **115200 baud**.
 
 - `platformio.ini` — PlatformIO environment, board settings, and dependencies.
 - `src/MAIN_WIFI_AP.cpp` — firmware initialization and main loop.
-- `src/WS_WIFI.cpp` — Wi-Fi access point and web interface.
-- `src/WS_DIN.cpp`, `src/WS_Dout.cpp` — digital input and output handling.
-- `src/WS_RS485.cpp`, `src/WS_CAN.cpp`, `src/WS_Bluetooth.cpp` — communication
-  interfaces.
-- `src/WS_RTC.cpp`, `src/WS_PCF85063.cpp` — RTC and scheduled events.
-- `src/WS_SD.cpp`, `src/WS_ETH.cpp` — SD storage and Ethernet.
+- `src/wifi_app.cpp`, `src/wifi_app.h` — Wi-Fi access point and web interface.
+- `../libraries/waveshare_board/` contains the shared board drivers
+  (`WS_*`, `I2C_Driver`) used by all projects in the workspace.
 
 At startup, `setup()` initializes the board services and starts their
 background tasks. The Arduino `loop()` is empty; ongoing work is handled by

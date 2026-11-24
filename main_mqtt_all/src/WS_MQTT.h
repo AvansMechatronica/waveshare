@@ -7,8 +7,16 @@
 #include <WiFiClientSecure.h>
 #include "WS_GPIO.h"
 #include "WS_Information.h"
+
+// Details about devices on the Waveshare cloud
+#define MQTT_Server   "mqtt.waveshare.cloud"
+#define MQTT_Port     1883
+#define MQTT_ID       "43cc52c9"
+#define MQTT_Pub      "Pub/59/553/43cc52c9"
+#define MQTT_Sub      "Sub/59/553/43cc52c9"
+
 #include "WS_Dout.h"
-#include "WS_WIFI.h"
+#include "wifi_app.h"
 #include "WS_Struct.h"
 
 #define MSG_BUFFER_SIZE (50)

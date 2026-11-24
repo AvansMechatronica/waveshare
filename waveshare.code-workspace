@@ -8,6 +8,9 @@
     },
     {
       "path": "main_wifi_sta"
+    },
+    {
+      "path": "main_wifi_template"
     }
   ]
 }
