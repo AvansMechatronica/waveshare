@@ -253,7 +253,7 @@ void Dout_Immediate_CHxs(uint8_t PinState, uint8_t Mode_Flag)
   else if(Mode_Flag == RTC_Mode_Trigger)
     printf("RTC Data :\r\n");
   for (int i = 0; i < 8; i++) {
-    Dout_Flag[i] = (PinState >> i) & 0x01; // 提取每一位并赋值
+    Dout_Flag[i] = (PinState >> i) & 0x01; // Extract each bit and assign it
   }
   ret = Dout_CHxs_PinState(PinState);                                               
   if(ret){

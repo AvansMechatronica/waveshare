@@ -130,10 +130,10 @@ void RS485_Loop()
     }
     else{
       for (int i = 0; i < Receive_Flag; i++) {
-        if (buf[i] >= 32 && buf[i] <= 126) {  // 检查是否是可打印字符
-          printf("%c", buf[i]);  // 打印可打印字符
+        if (buf[i] >= 32 && buf[i] <= 126) {  // Check whether this is a printable character
+          printf("%c", buf[i]);  // Print the printable character
         } else {
-          printf(" ");  // 对不可打印字符，打印"."代替
+          printf(" ");  // Print "." in place of a non-printable character
         }
       }
     }

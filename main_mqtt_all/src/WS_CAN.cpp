@@ -65,7 +65,7 @@ esp_err_t CAN_Set_Bitrate(uint32_t bitrate_kbps) {
   }
 
   if (CANTaskHandle != NULL) {
-    vTaskSuspend(CANTaskHandle);   // 先暂停任务，避免访问冲突
+    vTaskSuspend(CANTaskHandle);   // Suspend the task first to avoid access conflicts
   }
   CAN_Received_Len = 0;
   if(CAN_Read_Data != NULL)
@@ -135,7 +135,7 @@ esp_err_t CAN_Set_Bitrate(uint32_t bitrate_kbps) {
   driver_installed = true;
   printf("TWAI driver restarted at %u kbps\r\n", bitrate_kbps);
   if (CANTaskHandle != NULL) {
-    vTaskResume(CANTaskHandle);  // 恢复任务
+    vTaskResume(CANTaskHandle);  // Resume the task
   }
   return ESP_OK;
 }
@@ -303,7 +303,7 @@ void CAN_Loop(void)
       if(CAN_Received_Len + sizeof(datetime_str) + message.data_length_code + 3 >= CAN_Received_Len_MAX)
       {
         printf("Note : The data received by CAN is full.\r\n");
-        CAN_Received_Len = 0; // 或者清空，防止后续继续写溢出
+        CAN_Received_Len = 0; // Clear it to prevent subsequent writes from overflowing
         memset(CAN_Read_Data, 0, CAN_Received_Len_MAX);
         return;
       }    

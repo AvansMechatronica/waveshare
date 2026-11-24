@@ -222,8 +222,7 @@ void handleRoot() {
     "            <button value=\"AllOff\" id=\"btn0\" disabled onclick=\"ledSwitch(0)\">All Low</button>"+
     "        </div>"+
     "        <div id=\"errorTextbox\" style=\"display: none;\"> "+     
-    "            <p>English:Please refresh the page</p>"+      
-    "            <p>Chinese:请刷新页面</p>"+
+    "            <p>Please refresh the page</p>"+
     "        </div>"+
     "    </div>"+
     "</body>"+
@@ -493,13 +492,13 @@ void handleRTCDout() {
     "            <input type=\"text\" id=\"DateBox3\" style=\"width: 50px;\" value=\"20\">" + 
     "            <span>&nbsp;&nbsp;&nbsp;</span>" + 
     "            <select id=\"Week\" style=\"width: 150px;\">" + 
-    "                <option value=\"1\">星期一(Monday)</option>" + 
-    "                <option value=\"2\">星期二(Tuesday)</option>" + 
-    "                <option value=\"3\">星期三(Wednesday)</option>" + 
-    "                <option value=\"4\">星期四(Thursday)</option>" + 
-    "                <option value=\"5\">星期五(Friday)</option>" + 
-    "                <option value=\"6\">星期六(Saturday)</option>" + 
-    "                <option value=\"0\">星期日(Sunday)</option>" + 
+    "                <option value=\"1\">Monday</option>" + 
+    "                <option value=\"2\">Tuesday</option>" + 
+    "                <option value=\"3\">Wednesday</option>" + 
+    "                <option value=\"4\">Thursday</option>" + 
+    "                <option value=\"5\">Friday</option>" + 
+    "                <option value=\"6\">Saturday</option>" + 
+    "                <option value=\"0\">Sunday</option>" + 
     "            </select>" + 
     "        </div>" + 
     "        <div class=\"form-group\">" + 
@@ -514,45 +513,45 @@ void handleRTCDout() {
     "            <label for=\"doutBox\">Dout:</label>" +
     "            <span>CH1~CH4: </span>" + 
     "            <select id=\"DoutCH1\" style=\"width: 110px;\">" + 
-    "                <option value=\"2\">保留(Retain)</option>" + 
-    "                <option value=\"0\">设置低(Low)</option>" + 
-    "                <option value=\"1\">设置高(High)</option>" + 
+    "                <option value=\"2\">Retain</option>" + 
+    "                <option value=\"0\">Low</option>" + 
+    "                <option value=\"1\">High</option>" + 
     "            </select>" + 
     "            <select id=\"DoutCH2\" style=\"width: 110px;\">" + 
-    "                <option value=\"2\">保留(Retain)</option>" + 
-    "                <option value=\"0\">设置低(Low)</option>" + 
-    "                <option value=\"1\">设置高(High)</option>" + 
+    "                <option value=\"2\">Retain</option>" + 
+    "                <option value=\"0\">Low</option>" + 
+    "                <option value=\"1\">High</option>" + 
     "            </select>" + 
     "            <select id=\"DoutCH3\" style=\"width: 110px;\">" + 
-    "                <option value=\"2\">保留(Retain)</option>" + 
-    "                <option value=\"0\">设置低(Low)</option>" + 
-    "                <option value=\"1\">设置高(High)</option>" + 
+    "                <option value=\"2\">Retain</option>" + 
+    "                <option value=\"0\">Low</option>" + 
+    "                <option value=\"1\">High</option>" + 
     "            </select>" + 
     "            <select id=\"DoutCH4\" style=\"width: 110px;\">" + 
-    "                <option value=\"2\">保留(Retain)</option>" + 
-    "                <option value=\"0\">设置低(Low)</option>" + 
-    "                <option value=\"1\">设置高(High)</option>" + 
+    "                <option value=\"2\">Retain</option>" + 
+    "                <option value=\"0\">Low</option>" + 
+    "                <option value=\"1\">High</option>" + 
     "            </select>" + 
     "            <span><br>CH5~CH8: </span>" + 
     "            <select id=\"DoutCH5\" style=\"width: 110px;\">" + 
-    "                <option value=\"2\">保留(Retain)</option>" + 
-    "                <option value=\"0\">设置低(Low)</option>" + 
-    "                <option value=\"1\">设置高(High)</option>" + 
+    "                <option value=\"2\">Retain</option>" + 
+    "                <option value=\"0\">Low</option>" + 
+    "                <option value=\"1\">High</option>" + 
     "            </select>" + 
     "            <select id=\"DoutCH6\" style=\"width: 110px;\">" + 
-    "                <option value=\"2\">保留(Retain)</option>" + 
-    "                <option value=\"0\">设置低(Low)</option>" + 
-    "                <option value=\"1\">设置高(High)</option>" + 
+    "                <option value=\"2\">Retain</option>" + 
+    "                <option value=\"0\">Low</option>" + 
+    "                <option value=\"1\">High</option>" + 
     "            </select>" + 
     "            <select id=\"DoutCH7\" style=\"width: 110px;\">" + 
-    "                <option value=\"2\">保留(Retain)</option>" + 
-    "                <option value=\"0\">设置低(Low)</option>" + 
-    "                <option value=\"1\">设置高(High)</option>" + 
+    "                <option value=\"2\">Retain</option>" + 
+    "                <option value=\"0\">Low</option>" + 
+    "                <option value=\"1\">High</option>" + 
     "            </select>" + 
     "            <select id=\"DoutCH8\" style=\"width: 110px;\">" + 
-    "                <option value=\"2\">保留(Retain)</option>" + 
-    "                <option value=\"0\">设置低(Low)</option>" + 
-    "                <option value=\"1\">设置高(High)</option>" + 
+    "                <option value=\"2\">Retain</option>" + 
+    "                <option value=\"0\">Low</option>" + 
+    "                <option value=\"1\">High</option>" + 
     "            </select>" + 
     "        </div>" + 
     "        <div class=\"form-group\">" + 
@@ -560,14 +559,14 @@ void handleRTCDout() {
     "            <div style=\"display: flex; align-items: center; gap: 10px; margin-top: 5px;\">" +
     "                <input type=\"text\" id=\"CycleDuration\" style=\"width: 100px; display:none;\" value=\"100\">" + 
     "                <select id=\"CycleBox1\" style=\"width: 150px; text-align: left;\">" + 
-    "                    <option value=\"0\">无重复(Aperiodicity)</option>" + 
-    "                    <option value=\"1\">毫秒(Milliseconds)</option>" +  
-    "                    <option value=\"2\">秒(Seconds)</option>" + 
-    "                    <option value=\"3\">分(Minutes)</option>" + 
-    "                    <option value=\"4\">时(Hours)</option>" + 
-    "                    <option value=\"5\">每天(Everyday)</option>" + 
-    "                    <option value=\"6\">每周(Weekly)</option>" + 
-    "                    <option value=\"7\">每月(Monthly)</option>" + 
+    "                    <option value=\"0\">No Repeat</option>" + 
+    "                    <option value=\"1\">Milliseconds</option>" +  
+    "                    <option value=\"2\">Seconds</option>" + 
+    "                    <option value=\"3\">Minutes</option>" + 
+    "                    <option value=\"4\">Hours</option>" + 
+    "                    <option value=\"5\">Every Day</option>" + 
+    "                    <option value=\"6\">Weekly</option>" + 
+    "                    <option value=\"7\">Monthly</option>" + 
     "                </select>" + 
     "            </div>" +
     "        </div>" + 
@@ -585,13 +584,13 @@ void handleRTCDout() {
     "            <input type=\"text\" id=\"RtcDateBox3\" style=\"width: 50px;\" value=\"20\">" + 
     "            <span>&nbsp;&nbsp;&nbsp;</span>" + 
     "            <select id=\"RtcWeek\" style=\"width: 150px;\">" + 
-    "                <option value=\"1\">星期一(Monday)</option>" + 
-    "                <option value=\"2\">星期二(Tuesday)</option>" + 
-    "                <option value=\"3\">星期三(Wednesday)</option>" + 
-    "                <option value=\"4\">星期四(Thursday)</option>" + 
-    "                <option value=\"5\">星期五(Friday)</option>" + 
-    "                <option value=\"6\">星期六(Saturday)</option>" + 
-    "                <option value=\"0\">星期日(Sunday)</option>" + 
+    "                <option value=\"1\">Monday</option>" + 
+    "                <option value=\"2\">Tuesday</option>" + 
+    "                <option value=\"3\">Wednesday</option>" + 
+    "                <option value=\"4\">Thursday</option>" + 
+    "                <option value=\"5\">Friday</option>" + 
+    "                <option value=\"6\">Saturday</option>" + 
+    "                <option value=\"0\">Sunday</option>" + 
     "            </select>" + 
     "        </div>" + 
     "        <div class=\"form-group\">" + 
@@ -894,8 +893,8 @@ void handleSerial() {
     "            <button class=\"btn\" id=\"RS485RateConfig\" onclick=\"SetRS485BaudRate()\">Set BaudRate</button>" + 
     "            <label for=\"RS485Send\" style=\"font-weight:normal;\">RS485 Send Data: </label> "+
     "            <select id=\"DataType\" style=\"width: 120px; text-align: left;\">" + 
-    "                <option value=\"0\">字符串(char)</option>" + 
-    "                <option value=\"1\">十六进制(hex)</option>" + 
+    "                <option value=\"0\">String (char)</option>" + 
+    "                <option value=\"1\">Hexadecimal (hex)</option>" + 
     "            </select>" + 
     "            <span><br style=\"margin-bottom: 20px;\"></span>" + 
     "            <input type=\"text\" id=\"RS485SendData\" style=\"width: 500px;\" value=\"12\" oninput=\"handleRS485Input(this)\">" +   
@@ -904,12 +903,11 @@ void handleSerial() {
     "            <span><br></span>" + 
     "            <label for=\"RS485Read\" style=\"font-weight:normal;\">RS485 Receive Data: </label> "+
     "            <select id=\"RS485ReadDataType\" style=\"width: 120px; text-align: left;\">" + 
-    "                <option value=\"0\">字符串(char)</option>" + 
-    "                <option value=\"1\">十六进制(hex)</option>" + 
+    "                <option value=\"0\">String (char)</option>" + 
+    "                <option value=\"1\">Hexadecimal (hex)</option>" + 
     "            </select>" +   
     "            <button class=\"btn\" id=\"RS485ReadDataTypeConfig\" onclick=\"RS485Config()\">Set Config</button>" +
     "            <span><br></span>" +  
-    "            <span style=\"font-size: 8px;\">  注意：配置为字符串时，发送端发送数据若存在不可打印字符(0x00~0x1F, 0x7F)将会出现空白数据</span>" + 
     "            <span><br></span>" +  
     "            <span style=\"font-size: 8px;\">  Note: When configured as a string, if the data sent by the sender contains non-printable characters (0x00~0x1F, 0x7F), blank data will appear</span>" +  
     "            <textarea  id=\"RS485ReadData\" style=\"width: 500px; height: 100px; resize: vertical; word-break: break-all;\" placeholder=\"No data was received...\" ></textarea>" + 
@@ -934,8 +932,8 @@ void handleSerial() {
     "            <span>CAN ID : 0x</span>" + 
     "            <input type=\"text\" id=\"CANid\" style=\"width: 160px; text-align: left;\" value=\"00000000\">" + 
     "            <select id=\"CANextd\" style=\"width: 200px; text-align: left;\">" + 
-    "                <option value=\"0\">标准帧(Standard frames)</option>" + 
-    "                <option value=\"1\">扩展帧(Extended frames)</option>" + 
+    "                <option value=\"0\">Standard Frame</option>" + 
+    "                <option value=\"1\">Extended Frame</option>" + 
     "            </select>" + 
     "            <span><br style=\"margin-bottom: 20px;\"></span>" + 
     "            <input type=\"text\" id=\"CANSendData\" style=\"width: 500px;\" value=\"12\" pattern=\"[0-9a-fA-F]*\" oninput=\"this.value = this.value.replace(/[^0-9a-fA-F]/g, '').match(/.{1,2}/g)?.join(' ') || ''\">" +   
@@ -1242,13 +1240,13 @@ void handleRTCSerial() {
     "            <input type=\"text\" id=\"DateBox3\" style=\"width: 50px;\" value=\"20\">" + 
     "            <span>&nbsp;&nbsp;&nbsp;</span>" + 
     "            <select id=\"Week\" style=\"width: 150px;\">" + 
-    "                <option value=\"1\">星期一(Monday)</option>" + 
-    "                <option value=\"2\">星期二(Tuesday)</option>" + 
-    "                <option value=\"3\">星期三(Wednesday)</option>" + 
-    "                <option value=\"4\">星期四(Thursday)</option>" + 
-    "                <option value=\"5\">星期五(Friday)</option>" + 
-    "                <option value=\"6\">星期六(Saturday)</option>" + 
-    "                <option value=\"0\">星期日(Sunday)</option>" + 
+    "                <option value=\"1\">Monday</option>" + 
+    "                <option value=\"2\">Tuesday</option>" + 
+    "                <option value=\"3\">Wednesday</option>" + 
+    "                <option value=\"4\">Thursday</option>" + 
+    "                <option value=\"5\">Friday</option>" + 
+    "                <option value=\"6\">Saturday</option>" + 
+    "                <option value=\"0\">Sunday</option>" + 
     "            </select>" + 
     "        </div>" + 
     "        <div class=\"form-group\">" + 
@@ -1262,8 +1260,8 @@ void handleRTCSerial() {
     "        <div class=\"form-group\">" + 
     "            <label for=\"SerialBox\">SerialPort:</label>" +
     "            <select id=\"SerialPort\" style=\"width: 200px; text-align: left;\">" + 
-    "                <option value=\"0\">RS485 发送(RS485 Send)</option>" + 
-    "                <option value=\"1\">CAN 发送(CAN Send)</option>" + 
+    "                <option value=\"0\">RS485 Send</option>" + 
+    "                <option value=\"1\">CAN Send</option>" + 
     "            </select>" + 
     "        </div>" + 
     "        <div class=\"form-group\"  id=\"CANFrame\" style=\"display:none;\">" + 
@@ -1271,8 +1269,8 @@ void handleRTCSerial() {
     "            <span>CAN ID :0x</span>" + 
     "            <input type=\"text\" id=\"CANid\" style=\"width: 160px; text-align: left;\" value=\"00000000\">" + 
     "            <select id=\"CANextd\" style=\"width: 200px; text-align: left;\">" + 
-    "                <option value=\"0\">标准帧(Standard frames)</option>" + 
-    "                <option value=\"1\">扩展帧(Extended frames)</option>" + 
+    "                <option value=\"0\">Standard Frame</option>" + 
+    "                <option value=\"1\">Extended Frame</option>" + 
     "            </select>" + 
     "        </div>" + 
     "        <div class=\"form-group\">" + 
@@ -1280,8 +1278,8 @@ void handleRTCSerial() {
     "            <input type=\"text\" id=\"SerialData\" style=\"width: 500px; text-align: left;\" value=\"12\" oninput=\"handleSerialInput(this)\">" + 
     "            <span><br></span>" + 
     "            <select id=\"DataType\" style=\"width: 120px; text-align: left;\">" + 
-    "                <option value=\"0\">字符串(char)</option>" + 
-    "                <option value=\"1\">十六进制(hex)</option>" + 
+    "                <option value=\"0\">String (char)</option>" + 
+    "                <option value=\"1\">Hexadecimal (hex)</option>" + 
     "            </select>" + 
     "        </div>" + 
     "        <div class=\"form-group\">" + 
@@ -1289,14 +1287,14 @@ void handleRTCSerial() {
     "            <div style=\"display: flex; align-items: center; gap: 10px; margin-top: 5px;\">" +
     "                <input type=\"text\" id=\"CycleDuration\" style=\"width: 100px; display:none;\" value=\"100\">" + 
     "                <select id=\"CycleBox1\" style=\"width: 150px; text-align: left;\">" + 
-    "                    <option value=\"0\">无重复(Aperiodicity)</option>" + 
-    "                    <option value=\"1\">毫秒(Milliseconds)</option>" +  
-    "                    <option value=\"2\">秒(Seconds)</option>" + 
-    "                    <option value=\"3\">分(Minutes)</option>" + 
-    "                    <option value=\"4\">时(Hours)</option>" + 
-    "                    <option value=\"5\">每天(Everyday)</option>" + 
-    "                    <option value=\"6\">每周(Weekly)</option>" + 
-    "                    <option value=\"7\">每月(Monthly)</option>" + 
+    "                    <option value=\"0\">No Repeat</option>" + 
+    "                    <option value=\"1\">Milliseconds</option>" +  
+    "                    <option value=\"2\">Seconds</option>" + 
+    "                    <option value=\"3\">Minutes</option>" + 
+    "                    <option value=\"4\">Hours</option>" + 
+    "                    <option value=\"5\">Every Day</option>" + 
+    "                    <option value=\"6\">Weekly</option>" + 
+    "                    <option value=\"7\">Monthly</option>" + 
     "                </select>" + 
     "            </div>" +
     "        </div>" + 
@@ -1314,13 +1312,13 @@ void handleRTCSerial() {
     "            <input type=\"text\" id=\"RtcDateBox3\" style=\"width: 50px;\" value=\"20\">" + 
     "            <span>&nbsp;&nbsp;&nbsp;</span>" + 
     "            <select id=\"RtcWeek\" style=\"width: 150px;\">" + 
-    "                <option value=\"1\">星期一(Monday)</option>" + 
-    "                <option value=\"2\">星期二(Tuesday)</option>" + 
-    "                <option value=\"3\">星期三(Wednesday)</option>" + 
-    "                <option value=\"4\">星期四(Thursday)</option>" + 
-    "                <option value=\"5\">星期五(Friday)</option>" + 
-    "                <option value=\"6\">星期六(Saturday)</option>" + 
-    "                <option value=\"0\">星期日(Sunday)</option>" + 
+    "                <option value=\"1\">Monday</option>" + 
+    "                <option value=\"2\">Tuesday</option>" + 
+    "                <option value=\"3\">Wednesday</option>" + 
+    "                <option value=\"4\">Thursday</option>" + 
+    "                <option value=\"5\">Friday</option>" + 
+    "                <option value=\"6\">Saturday</option>" + 
+    "                <option value=\"0\">Sunday</option>" + 
     "            </select>" + 
     "        </div>" + 
     "        <div class=\"form-group\">" + 
@@ -1407,13 +1405,13 @@ String escapeJson(const char* input) {
   return output;
 }
 void handleGetRateConfig() {
-  // 构造 JSON 响应字符串
+  // Build the JSON response string
   String json = "{";
   json += "\"rs485_baud\": \"" + String(RS485_BaudRate) + "\",";
   json += "\"can_rate\": \"" + String(CAN_bitrate_kbps) + "\"";
   json += "}";
 
-  // 发送响应
+  // Send the response
   server.send(200, "application/json", json);
 }
 
@@ -1812,7 +1810,7 @@ bool parseData(const char* Text, datetime_t* dt, Status_adjustment* Dout_n, uint
 int hexCharToByte(char high, char low) {
     int highValue = (high >= '0' && high <= '9') ? (high - '0') : (high >= 'A' && high <= 'F') ? (high - 'A' + 10) : (high - 'a' + 10);
     int lowValue = (low >= '0' && low <= '9') ? (low - '0') : (low >= 'A' && low <= 'F') ? (low - 'A' + 10) : (low - 'a' + 10);
-    return (highValue << 4) | lowValue;  // 将高4位和低4位合并为一个字节
+    return (highValue << 4) | lowValue;  // Combine the high and low 4 bits into one byte
 }
 // String decoding
 bool ParseRTCData(const char* Text, datetime_t* dt, Web_Receive* SerialData, Repetition_event* cycleEvent) {    

@@ -1,9 +1,9 @@
 #include "WS_Bluetooth.h"
 /*
-数据          ：控制数字输出（数据对应数字通道，0x31 为通道1，0x32 为通道2，0x39 为全低， 0x30 为全高）
-06 +数据      ：控制 RS485 发送数据控制外部连接的 Modbus RTU Relay 的继电器通道（数据对应Modbus RTU Relay 的继电器通道，0x01 为继电器1，0x02 为继电器2，0x39 为继电器全开， 0x3A 为继电器全关）
-0A 0B + 数据  : RS485 发送数据（0A 0C + 多个字节数据，实际发送后面的数据）
-0A 0C + 数据  : CAN 发送数据 (0A 0C + 4个字节ID + 一个字节帧类型（0x01扩展帧，0x00标准帧） + 多个字节数据，实际根据前方配置设置 CAN 参数后发送后面的数据)
+Data           : Control digital outputs (data specifies the digital channel: 0x31 = channel 1, 0x32 = channel 2, 0x39 = all low, 0x30 = all high)
+06 + data      : Control a relay channel on an external Modbus RTU Relay via RS485 (data specifies the relay channel: 0x01 = relay 1, 0x02 = relay 2, 0x39 = all relays on, 0x3A = all relays off)
+0A 0B + data   : Send data over RS485 (0A 0C + multiple data bytes; the following data is sent)
+0A 0C + data   : Send data over CAN (0A 0C + 4-byte ID + 1-byte frame type (0x01 = extended frame, 0x00 = standard frame) + multiple data bytes; the following data is sent after configuring CAN parameters as specified above)
 */
 BLEServer* pServer;                                                             // Used to represent a BLE server
 BLECharacteristic* pTxCharacteristic;
