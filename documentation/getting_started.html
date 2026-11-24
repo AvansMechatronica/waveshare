@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="nl" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aan de slag &mdash; Waveshare ESP32-S3-POE-ETH-8DI-8DO 0.1 documentatie</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a57088fb"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=e4d38c6a"></script>
+      <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Projecten" href="projects.html" />
+    <link rel="prev" title="Inleiding" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Waveshare ESP32-S3-POE-ETH-8DI-8DO
+              <img src="../_static/avans-hogeschool-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Zoek in documentatie" aria-label="Zoek in documentatie" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigatiemenu">
+              <p class="caption" role="heading"><span class="caption-text">Inhoudsopgave:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Inleiding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Aan de slag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#benodigdheden">Benodigdheden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#repository-clonen">Repository clonen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workspace-openen">Workspace openen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bouwen-uploaden-en-monitoren">Bouwen, uploaden en monitoren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#board-instellingen-in-platformio-ini">Board-instellingen in platformio.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#afhankelijkheden">Afhankelijkheden</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projecten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="template.html">Template-project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Library-referentie: waveshare_board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Documentatie bijwerken en publiceren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Veelgestelde vragen (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Referenties</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Navigatiemenu voor mobiel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Waveshare ESP32-S3-POE-ETH-8DI-8DO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Paginanavigatie">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Aan de slag</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation/getting_started.md.txt" rel="nofollow"> Bekijk paginabron</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="aan-de-slag">
+<h1>Aan de slag<a class="headerlink" href="#aan-de-slag" title="Link to this heading"></a></h1>
+<section id="benodigdheden">
+<h2>Benodigdheden<a class="headerlink" href="#benodigdheden" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Een Waveshare ESP32-S3-POE-ETH-8DI-8DO board en een USB-C datakabel.</p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> met de
+<a class="reference external" href="https://platformio.org/install/ide?install=vscode">PlatformIO IDE</a>-extensie,
+of <a class="reference external" href="https://platformio.org/install/cli">PlatformIO Core</a>.</p></li>
+<li><p>Toegang tot een WiFi-netwerk en/of Ethernet, afhankelijk van de gekozen firmware.</p></li>
+</ul>
+</section>
+<section id="repository-clonen">
+<h2>Repository clonen<a class="headerlink" href="#repository-clonen" title="Link to this heading"></a></h2>
+<p>De broncode staat op GitHub:
+<a class="reference external" href="https://github.com/AvansMechatronica/waveshare">AvansMechatronica/waveshare</a>.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+Git (command line)</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/AvansMechatronica/waveshare.git
+<span class="nb">cd</span><span class="w"> </span>waveshare
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+VS Code</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
+<ol class="arabic simple">
+<li><p>Open het Command Palette (<code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code>) en kies <strong>Git: Clone</strong>.</p></li>
+<li><p>Plak <code class="docutils literal notranslate"><span class="pre">https://github.com/AvansMechatronica/waveshare.git</span></code>.</p></li>
+<li><p>Kies een map en open daarna de gekloonde repository.</p></li>
+</ol>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label aria-controls="sd-tab-item-2-content" class="sd-tab-label" for="sd-tab-item-2">
+Zonder Git</label><div class="sd-tab-content docutils" id="sd-tab-item-2-content">
+<p>Download de code als ZIP via
+<a class="reference external" href="https://github.com/AvansMechatronica/waveshare/archive/refs/heads/main.zip">Code → Download ZIP</a>
+en pak het bestand uit.</p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>Clone altijd de volledige repository, en niet één projectmap. De projecten
+gebruiken de gedeelde map <code class="docutils literal notranslate"><span class="pre">libraries/</span></code>, die naast de projectmappen moet staan.</p>
+</div>
+<p>Bijwerken naar de laatste versie:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull
+</pre></div>
+</div>
+</section>
+<section id="workspace-openen">
+<h2>Workspace openen<a class="headerlink" href="#workspace-openen" title="Link to this heading"></a></h2>
+<p>Open <code class="docutils literal notranslate"><span class="pre">waveshare.code-workspace</span></code> in VS Code. Alle firmwareprojecten verschijnen dan
+als aparte mappen. PlatformIO herkent elk project aan zijn eigen <code class="docutils literal notranslate"><span class="pre">platformio.ini</span></code>.</p>
+</section>
+<section id="bouwen-uploaden-en-monitoren">
+<h2>Bouwen, uploaden en monitoren<a class="headerlink" href="#bouwen-uploaden-en-monitoren" title="Link to this heading"></a></h2>
+<p>Voer de commando’s uit in de map van het project:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label aria-controls="sd-tab-item-3-content" class="sd-tab-label" for="sd-tab-item-3">
+Template (AP of STA)</label><div class="sd-tab-content docutils" id="sd-tab-item-3-content">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>main_wifi_template
+pio<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span>waveshare_esp32s3_sta<span class="w">              </span><span class="c1"># bouwen</span>
+pio<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span>waveshare_esp32s3_sta<span class="w"> </span>-t<span class="w"> </span>upload<span class="w">    </span><span class="c1"># uploaden</span>
+pio<span class="w"> </span>device<span class="w"> </span>monitor<span class="w"> </span>-e<span class="w"> </span>waveshare_esp32s3_sta<span class="w">   </span><span class="c1"># seriële monitor</span>
+</pre></div>
+</div>
+<p>Vervang <code class="docutils literal notranslate"><span class="pre">waveshare_esp32s3_sta</span></code> door <code class="docutils literal notranslate"><span class="pre">waveshare_esp32s3_ap</span></code> voor access-point mode.</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label aria-controls="sd-tab-item-4-content" class="sd-tab-label" for="sd-tab-item-4">
+Overige projecten</label><div class="sd-tab-content docutils" id="sd-tab-item-4-content">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>main_wifi_sta
+pio<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span>waveshare_esp32s3_io
+pio<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span>waveshare_esp32s3_io<span class="w"> </span>-t<span class="w"> </span>upload
+pio<span class="w"> </span>device<span class="w"> </span>monitor<span class="w"> </span>-e<span class="w"> </span>waveshare_esp32s3_io
+</pre></div>
+</div>
+</div>
+</div>
+<p>De seriële monitor draait op 115200 baud via de ingebouwde USB-C-poort (native CDC).</p>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>Als <code class="docutils literal notranslate"><span class="pre">pio</span></code> niet in het pad staat, gebruik dan het volledige pad, bijvoorbeeld
+<code class="docutils literal notranslate"><span class="pre">%USERPROFILE%\.platformio\penv\Scripts\pio.exe</span></code> op Windows, of gebruik de
+knoppen in de PlatformIO-statusbalk van VS Code.</p>
+</div>
+</section>
+<section id="board-instellingen-in-platformio-ini">
+<h2>Board-instellingen in platformio.ini<a class="headerlink" href="#board-instellingen-in-platformio-ini" title="Link to this heading"></a></h2>
+<p>Alle projecten gebruiken dezelfde basisinstellingen voor de N16R8-module:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Instelling</p></th>
+<th class="head"><p>Waarde</p></th>
+<th class="head"><p>Waarom</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">board</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">esp32-s3-devkitc-1</span></code></p></td>
+<td><p>Generiek ESP32-S3 board als basis</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">board_build.arduino.memory_type</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">qio_opi</span></code></p></td>
+<td><p>Octal PSRAM van de N16R8</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">board_build.partitions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">default_16MB.csv</span></code></p></td>
+<td><p>Volledige 16 MB flash gebruiken</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-DBOARD_HAS_PSRAM</span></code></p></td>
+<td><p>build flag</p></td>
+<td><p>PSRAM activeren</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-DARDUINO_USB_CDC_ON_BOOT=1</span></code></p></td>
+<td><p>build flag</p></td>
+<td><p>Seriële output via USB-C</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lib_extra_dirs</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">../libraries</span></code></p></td>
+<td><p>Gedeelde libraries, waaronder <code class="docutils literal notranslate"><span class="pre">waveshare_board</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="afhankelijkheden">
+<h2>Afhankelijkheden<a class="headerlink" href="#afhankelijkheden" title="Link to this heading"></a></h2>
+<p>Via <code class="docutils literal notranslate"><span class="pre">lib_deps</span></code> worden deze libraries automatisch geïnstalleerd:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arduino-libraries/Ethernet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bblanchon/ArduinoJson</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h2zero/NimBLE-Arduino</span></code>: vereist voor de Bluetooth-code. De arduino-esp32 3.x
+core bevat geen klassieke Bluedroid BLE-library (<code class="docutils literal notranslate"><span class="pre">BLEDevice.h</span></code>) meer.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">NTPClient</span></code> en <code class="docutils literal notranslate"><span class="pre">PubSubClient</span></code> staan lokaal in <code class="docutils literal notranslate"><span class="pre">libraries/</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Voettekst">
+        <a href="overview.html" class="btn btn-neutral float-left" title="Inleiding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Vorige</a>
+        <a href="projects.html" class="btn btn-neutral float-right" title="Projecten" accesskey="n" rel="next">Volgende <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Gerard Harkema.</p>
+  </div>
+
+  Gebouwd met <a href="https://www.sphinx-doc.org/">Sphinx</a> met een
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thema</a>
+    geleverd door <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

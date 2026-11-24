@@ -1,0 +1,659 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="nl" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library-referentie: waveshare_board &mdash; Waveshare ESP32-S3-POE-ETH-8DI-8DO 0.1 documentatie</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a57088fb"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=e4d38c6a"></script>
+      <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Documentatie bijwerken en publiceren" href="pages.html" />
+    <link rel="prev" title="Template-project" href="template.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Waveshare ESP32-S3-POE-ETH-8DI-8DO
+              <img src="../_static/avans-hogeschool-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Zoek in documentatie" aria-label="Zoek in documentatie" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigatiemenu">
+              <p class="caption" role="heading"><span class="caption-text">Inhoudsopgave:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Aan de slag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projecten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="template.html">Template-project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Library-referentie: waveshare_board</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#digitale-uitgangen-ws-dout">Digitale uitgangen (WS_Dout)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#digitale-ingangen-ws-din">Digitale ingangen (WS_DIN)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rgb-led-en-zoemer-ws-gpio">RGB-led en zoemer (WS_GPIO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rs485-ws-rs485">RS485 (WS_RS485)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#can-ws-can">CAN (WS_CAN)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#real-time-clock-ws-pcf85063">Real-time clock (WS_PCF85063)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timer-events-ws-rtc">Timer-events (WS_RTC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bluetooth-le-ws-bluetooth">Bluetooth LE (WS_Bluetooth)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ethernet-ws-eth">Ethernet (WS_ETH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sd-kaart-ws-sd">SD-kaart (WS_SD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-o-expander-ws-tca9554pwr">I/O-expander (WS_TCA9554PWR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i2c-i2c-driver">I²C (I2C_Driver)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gedeelde-typen-ws-struct-en-ws-information">Gedeelde typen (WS_Struct en WS_Information)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Documentatie bijwerken en publiceren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Veelgestelde vragen (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Referenties</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Navigatiemenu voor mobiel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Waveshare ESP32-S3-POE-ETH-8DI-8DO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Paginanavigatie">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Library-referentie: waveshare_board</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation/library.md.txt" rel="nofollow"> Bekijk paginabron</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="library-referentie-waveshare-board">
+<h1>Library-referentie: waveshare_board<a class="headerlink" href="#library-referentie-waveshare-board" title="Link to this heading"></a></h1>
+<p>De library <code class="docutils literal notranslate"><span class="pre">libraries/waveshare_board</span></code> bevat de drivers voor alle hardware op het
+board. Alle firmwareprojecten gebruiken deze library. Neem in je eigen code
+gewoon de header op, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&quot;WS_Dout.h&quot;</span></code>. PlatformIO vindt en
+bouwt de library automatisch.</p>
+<p>De meeste modules starten bij hun <code class="docutils literal notranslate"><span class="pre">*_Init()</span></code> een eigen FreeRTOS-taak. Na de
+initialisatie hoef je alleen de functies aan te roepen; de taken doen het
+periodieke werk.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Module</p></th>
+<th class="head"><p>Header</p></th>
+<th class="head"><p>Functie</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#digitale-uitgangen-ws-dout"><span class="xref myst">Digitale uitgangen</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_Dout.h</span></code></p></td>
+<td><p>8 uitgangen via TCA9554</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#digitale-ingangen-ws-din"><span class="xref myst">Digitale ingangen</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_DIN.h</span></code></p></td>
+<td><p>8 ingangen</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#rgb-led-en-zoemer-ws-gpio"><span class="xref myst">RGB-led en zoemer</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_GPIO.h</span></code></p></td>
+<td><p>Statusindicatie</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#rs485-ws-rs485"><span class="xref myst">RS485</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_RS485.h</span></code></p></td>
+<td><p>Seriële bus, Modbus-uitbreiding</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#can-ws-can"><span class="xref myst">CAN</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_CAN.h</span></code></p></td>
+<td><p>CAN-bus via TWAI</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#real-time-clock-ws-pcf85063"><span class="xref myst">Real-time clock</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_PCF85063.h</span></code></p></td>
+<td><p>PCF85063 tijd en alarm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#timer-events-ws-rtc"><span class="xref myst">Timer-events</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_RTC.h</span></code></p></td>
+<td><p>Tijdgestuurde acties</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bluetooth-le-ws-bluetooth"><span class="xref myst">Bluetooth LE</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_Bluetooth.h</span></code></p></td>
+<td><p>Bediening via BLE</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ethernet-ws-eth"><span class="xref myst">Ethernet</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_ETH.h</span></code></p></td>
+<td><p>W5500 en NTP-tijd</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#sd-kaart-ws-sd"><span class="xref myst">SD-kaart</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_SD.h</span></code></p></td>
+<td><p>Bestanden op micro-SD</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#i-o-expander-ws-tca9554pwr"><span class="xref myst">I/O-expander</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_TCA9554PWR.h</span></code></p></td>
+<td><p>Laag niveau TCA9554</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#i2c-i2c-driver"><span class="xref myst">I²C</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">I2C_Driver.h</span></code></p></td>
+<td><p>Laag niveau I²C</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gedeelde-typen-ws-struct-en-ws-information"><span class="xref myst">Gedeelde typen</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_Struct.h</span></code>, <code class="docutils literal notranslate"><span class="pre">WS_Information.h</span></code></p></td>
+<td><p>Enums en opties</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<section id="digitale-uitgangen-ws-dout">
+<h2>Digitale uitgangen (WS_Dout)<a class="headerlink" href="#digitale-uitgangen-ws-dout" title="Link to this heading"></a></h2>
+<p>De 8 uitgangen worden aangestuurd via de TCA9554 I/O-expander. Kanaalnummers lopen
+van 1 tot en met 8 (<code class="docutils literal notranslate"><span class="pre">GPIO_PIN_CH1</span></code> … <code class="docutils literal notranslate"><span class="pre">GPIO_PIN_CH8</span></code>).</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Dout_Init(void)</span></code></p></td>
+<td><p>Initialiseert de expander (alle pinnen als uitgang) en start een bewakingstaak die bij een fout de led en zoemer laat knipperen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">Dout_CHx(uint8_t</span> <span class="pre">CHx,</span> <span class="pre">bool</span> <span class="pre">State)</span></code></p></td>
+<td><p>Zet uitgang <code class="docutils literal notranslate"><span class="pre">CHx</span></code> (1–8) aan (<code class="docutils literal notranslate"><span class="pre">true</span></code>) of uit (<code class="docutils literal notranslate"><span class="pre">false</span></code>). Geeft <code class="docutils literal notranslate"><span class="pre">true</span></code> bij succes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">Dout_Open(uint8_t</span> <span class="pre">CHx)</span></code> / <code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">Dout_Closs(uint8_t</span> <span class="pre">CHx)</span></code></p></td>
+<td><p>Zet één uitgang aan of uit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">Dout_CHx_Toggle(uint8_t</span> <span class="pre">CHx)</span></code></p></td>
+<td><p>Wisselt de toestand van één uitgang.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">Dout_CHxs_PinState(uint8_t</span> <span class="pre">PinState)</span></code></p></td>
+<td><p>Zet alle 8 uitgangen tegelijk; bit 0 = CH1 … bit 7 = CH8.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Dout_Immediate(uint8_t</span> <span class="pre">CHx,</span> <span class="pre">bool</span> <span class="pre">State,</span> <span class="pre">uint8_t</span> <span class="pre">Mode_Flag)</span></code></p></td>
+<td><p>Als <code class="docutils literal notranslate"><span class="pre">Dout_CHx</span></code>, maar werkt ook <code class="docutils literal notranslate"><span class="pre">Dout_Flag[]</span></code> bij en logt de bron (<code class="docutils literal notranslate"><span class="pre">Mode_Flag</span></code>, zie <code class="docutils literal notranslate"><span class="pre">Trigger_event</span></code>).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Dout_Immediate_CHxs(uint8_t</span> <span class="pre">PinState,</span> <span class="pre">uint8_t</span> <span class="pre">Mode_Flag)</span></code></p></td>
+<td><p>Zet alle uitgangen via een bitmasker en werkt <code class="docutils literal notranslate"><span class="pre">Dout_Flag[]</span></code> bij.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Dout_Immediate_CHxn(Status_adjustment</span> <span class="pre">*Dout_n,</span> <span class="pre">uint8_t</span> <span class="pre">Mode_Flag)</span></code></p></td>
+<td><p>Zet per kanaal <code class="docutils literal notranslate"><span class="pre">STATE_Open</span></code>, <code class="docutils literal notranslate"><span class="pre">STATE_Closs</span></code> of <code class="docutils literal notranslate"><span class="pre">STATE_Retain</span></code> (ongewijzigd laten). <code class="docutils literal notranslate"><span class="pre">Dout_n</span></code> is een array van 8 elementen.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Dout_Analysis(uint8_t</span> <span class="pre">*buf,</span> <span class="pre">uint8_t</span> <span class="pre">Mode_Flag)</span></code></p></td>
+<td><p>Interpreteert een commando-teken: <code class="docutils literal notranslate"><span class="pre">'1'</span></code>…<code class="docutils literal notranslate"><span class="pre">'8'</span></code> wisselt een kanaal, <code class="docutils literal notranslate"><span class="pre">'9'</span></code> zet alles aan, <code class="docutils literal notranslate"><span class="pre">'0'</span></code> alles uit. Wordt gebruikt door Bluetooth en RS485.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">Dout_Flag[8]</span></code></p></td>
+<td><p>Laatst bekende toestand van elke uitgang.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;WS_Dout.h&quot;</span>
+
+<span class="n">Dout_Immediate</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_Mode_Trigger</span><span class="p">);</span><span class="w">   </span><span class="c1">// CH1 aan</span>
+<span class="n">Dout_Immediate_CHxs</span><span class="p">(</span><span class="mb">0b10000001</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_Mode_Trigger</span><span class="p">);</span><span class="w"> </span><span class="c1">// alleen CH1 en CH8 aan</span>
+</pre></div>
+</div>
+</section>
+<section id="digitale-ingangen-ws-din">
+<h2>Digitale ingangen (WS_DIN)<a class="headerlink" href="#digitale-ingangen-ws-din" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie / symbool</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">DIN_Init(void)</span></code></p></td>
+<td><p>Zet de ingangspinnen (GPIO 4–11) als input met pull-up en start <code class="docutils literal notranslate"><span class="pre">DINTask</span></code>, die elke 20 ms de ingangen leest.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">DIN_Flag[8]</span></code></p></td>
+<td><p>Actuele toestand van de ingangen CH1–CH8.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Dout_Immediate_Default</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code> (standaard): een verandering op de ingangen schakelt direct de bijbehorende uitgangen. Zet op <code class="docutils literal notranslate"><span class="pre">0</span></code> in <code class="docutils literal notranslate"><span class="pre">WS_DIN.h</span></code> om dit uit te schakelen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">DIN_Inverse_Enable</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code>: uitgangen volgen de ingangen geïnverteerd.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>Zolang <code class="docutils literal notranslate"><span class="pre">Dout_Immediate_Default</span></code> op <code class="docutils literal notranslate"><span class="pre">1</span></code> staat, nemen de ingangen bij elke
+verandering de uitgangen over. Wil je de uitgangen volledig vanuit je eigen code
+sturen, zet het dan op <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+</div>
+</section>
+<section id="rgb-led-en-zoemer-ws-gpio">
+<h2>RGB-led en zoemer (WS_GPIO)<a class="headerlink" href="#rgb-led-en-zoemer-ws-gpio" title="Link to this heading"></a></h2>
+<p>De led en zoemer werken met een wachtrij van maximaal 10 signalen, die door een
+eigen taak worden afgespeeld. De functies blokkeren dus niet.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">GPIO_Init()</span></code></p></td>
+<td><p>Initialiseert led en zoemer en start <code class="docutils literal notranslate"><span class="pre">RGBTask</span></code> en <code class="docutils literal notranslate"><span class="pre">BuzzerTask</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">RGB_Light(uint8_t</span> <span class="pre">r,</span> <span class="pre">uint8_t</span> <span class="pre">g,</span> <span class="pre">uint8_t</span> <span class="pre">b)</span></code></p></td>
+<td><p>Zet de led direct op een kleur (0–255 per kanaal).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">RGB_Open_Time(uint8_t</span> <span class="pre">r,</span> <span class="pre">uint8_t</span> <span class="pre">g,</span> <span class="pre">uint8_t</span> <span class="pre">b,</span> <span class="pre">uint16_t</span> <span class="pre">Time,</span> <span class="pre">uint16_t</span> <span class="pre">flicker_time)</span></code></p></td>
+<td><p>Laat de led <code class="docutils literal notranslate"><span class="pre">Time</span></code> ms branden; met <code class="docutils literal notranslate"><span class="pre">flicker_time</span></code> &gt; 50 ms knippert hij met die periode.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Buzzer_Open(void)</span></code> / <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Buzzer_Closs(void)</span></code></p></td>
+<td><p>Zoemer direct aan of uit.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Buzzer_Open_Time(uint16_t</span> <span class="pre">Time,</span> <span class="pre">uint16_t</span> <span class="pre">flicker_time)</span></code></p></td>
+<td><p>Zoemer <code class="docutils literal notranslate"><span class="pre">Time</span></code> ms aan, eventueel pulserend met <code class="docutils literal notranslate"><span class="pre">flicker_time</span></code> (&gt; 50 ms).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Set_Dutyfactor(uint16_t</span> <span class="pre">dutyfactor)</span></code></p></td>
+<td><p>PWM-dutycycle van de zoemer (0–255), dus het volume.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">RGB_Open_Time</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">     </span><span class="c1">// 1 s groen</span>
+<span class="n">RGB_Open_Time</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span><span class="w">   </span><span class="c1">// 2 s rood knipperen</span>
+<span class="n">Buzzer_Open_Time</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w">           </span><span class="c1">// 0,5 s pulserend piepen</span>
+</pre></div>
+</div>
+</section>
+<section id="rs485-ws-rs485">
+<h2>RS485 (WS_RS485)<a class="headerlink" href="#rs485-ws-rs485" title="Link to this heading"></a></h2>
+<p>RS485 gebruikt UART1 (TX GPIO 17, RX GPIO 18). Standaard 9600 baud, 8N1.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie / symbool</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">RS485_Init()</span></code></p></td>
+<td><p>Start de seriële poort en <code class="docutils literal notranslate"><span class="pre">RS485Task</span></code>, die ontvangen data opslaat voor de webinterface.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">SetData(uint8_t*</span> <span class="pre">data,</span> <span class="pre">size_t</span> <span class="pre">length)</span></code></p></td>
+<td><p>Verstuurt <code class="docutils literal notranslate"><span class="pre">length</span></code> bytes over RS485.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">ReadData(uint8_t*</span> <span class="pre">buf,</span> <span class="pre">uint8_t</span> <span class="pre">length)</span></code></p></td>
+<td><p>Leest <code class="docutils literal notranslate"><span class="pre">length</span></code> bytes als die beschikbaar zijn.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">RS485_UpdateBaudRate(unsigned</span> <span class="pre">long</span> <span class="pre">baud)</span></code></p></td>
+<td><p>Wijzigt de baudrate tijdens bedrijf.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">RS485_Analysis(uint8_t</span> <span class="pre">*buf)</span></code></p></td>
+<td><p>Stuurt een externe Modbus RTU relaismodule aan (kanaal 1–8, <code class="docutils literal notranslate"><span class="pre">Extension_ALL_ON</span></code>, <code class="docutils literal notranslate"><span class="pre">Extension_ALL_OFF</span></code>). Actief als <code class="docutils literal notranslate"><span class="pre">Extension_Enable</span></code> = 1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">long</span> <span class="pre">RS485_BaudRate</span></code></p></td>
+<td><p>Huidige baudrate.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">msg</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x05</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x8C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3A</span><span class="p">};</span>
+<span class="n">SetData</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+<section id="can-ws-can">
+<h2>CAN (WS_CAN)<a class="headerlink" href="#can-ws-can" title="Link to this heading"></a></h2>
+<p>CAN gebruikt de interne TWAI-controller (TX GPIO 2, RX GPIO 3). Standaard 250 kbit/s.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie / symbool</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">CAN_Init(void)</span></code></p></td>
+<td><p>Installeert en start de TWAI-driver en <code class="docutils literal notranslate"><span class="pre">CANTask</span></code>, die berichten ontvangt en busfouten afhandelt.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">send_message(uint32_t</span> <span class="pre">CAN_ID,</span> <span class="pre">uint8_t*</span> <span class="pre">Data,</span> <span class="pre">uint8_t</span> <span class="pre">Data_length,</span> <span class="pre">bool</span> <span class="pre">Frame_type)</span></code></p></td>
+<td><p>Verstuurt een bericht. <code class="docutils literal notranslate"><span class="pre">Frame_type</span></code> = <code class="docutils literal notranslate"><span class="pre">true</span></code> voor een extended frame (29-bit ID), <code class="docutils literal notranslate"><span class="pre">false</span></code> voor standaard (11-bit).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">send_message_Bytes(twai_message_t</span> <span class="pre">message)</span></code></p></td>
+<td><p>Verstuurt een volledig opgebouwd TWAI-bericht.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">esp_err_t</span> <span class="pre">CAN_Set_Bitrate(uint32_t</span> <span class="pre">bitrate_kbps)</span></code> / <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">CAN_UpdateRate(uint32_t</span> <span class="pre">bitrate_kbps)</span></code></p></td>
+<td><p>Wijzigt de bitrate (bijv. 125, 250, 500, 1000).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span> <span class="pre">CAN_bitrate_kbps</span></code></p></td>
+<td><p>Huidige bitrate.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">data</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x11</span><span class="p">,</span><span class="w"> </span><span class="mh">0x22</span><span class="p">,</span><span class="w"> </span><span class="mh">0x33</span><span class="p">};</span>
+<span class="n">send_message</span><span class="p">(</span><span class="mh">0x123</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">data</span><span class="p">),</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w">  </span><span class="c1">// standaard frame</span>
+</pre></div>
+</div>
+</section>
+<section id="real-time-clock-ws-pcf85063">
+<h2>Real-time clock (WS_PCF85063)<a class="headerlink" href="#real-time-clock-ws-pcf85063" title="Link to this heading"></a></h2>
+<p>De PCF85063 zit op de I²C-bus (adres <code class="docutils literal notranslate"><span class="pre">0x51</span></code>). Tijden worden doorgegeven als <code class="docutils literal notranslate"><span class="pre">datetime_t</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">year</span><span class="p">;</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">month</span><span class="p">;</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">day</span><span class="p">;</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dotw</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">hour</span><span class="p">;</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">minute</span><span class="p">;</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">second</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">datetime_t</span><span class="p">;</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie / symbool</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">PCF85063_Init(void)</span></code></p></td>
+<td><p>Initialiseert de RTC en start een taak die <code class="docutils literal notranslate"><span class="pre">datetime</span></code> elke 100 ms bijwerkt. Wordt aangeroepen door <code class="docutils literal notranslate"><span class="pre">RTC_Init()</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">datetime_t</span> <span class="pre">datetime</span></code></p></td>
+<td><p>Actuele datum en tijd.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">PCF85063_Set_All(datetime_t</span> <span class="pre">time)</span></code></p></td>
+<td><p>Zet datum en tijd.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">PCF85063_Set_Time(datetime_t</span> <span class="pre">time)</span></code> / <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">PCF85063_Set_Date(datetime_t</span> <span class="pre">date)</span></code></p></td>
+<td><p>Zet alleen de tijd of alleen de datum.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">PCF85063_Read_Time(datetime_t</span> <span class="pre">*time)</span></code></p></td>
+<td><p>Leest de tijd direct uit de RTC.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">PCF85063_Set_Alarm(datetime_t</span> <span class="pre">time)</span></code> / <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">PCF85063_Read_Alarm(datetime_t</span> <span class="pre">*time)</span></code></p></td>
+<td><p>Alarmtijd zetten of lezen.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">PCF85063_Enable_Alarm(void)</span></code> / <code class="docutils literal notranslate"><span class="pre">uint8_t</span> <span class="pre">PCF85063_Get_Alarm_Flag()</span></code></p></td>
+<td><p>Alarm inschakelen en de alarmvlag uitlezen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">datetime_to_str(char</span> <span class="pre">*str,</span> <span class="pre">datetime_t</span> <span class="pre">time)</span></code></p></td>
+<td><p>Zet een tijd om naar tekst.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="timer-events-ws-rtc">
+<h2>Timer-events (WS_RTC)<a class="headerlink" href="#timer-events-ws-rtc" title="Link to this heading"></a></h2>
+<p>Met timer-events voer je acties uit op een vast tijdstip, eventueel herhaald.
+Er kunnen maximaal 10 events tegelijk actief zijn.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">RTC_Init(void)</span></code></p></td>
+<td><p>Initialiseert de RTC en start <code class="docutils literal notranslate"><span class="pre">RTCTask</span></code>, die de events uitvoert.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">TimerEvent_CHx_Set(datetime_t</span> <span class="pre">time,</span> <span class="pre">uint8_t</span> <span class="pre">CHx,</span> <span class="pre">bool</span> <span class="pre">State,</span> <span class="pre">Repetition_event</span> <span class="pre">Repetition)</span></code></p></td>
+<td><p>Zet uitgang <code class="docutils literal notranslate"><span class="pre">CHx</span></code> op tijdstip <code class="docutils literal notranslate"><span class="pre">time</span></code> aan of uit.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">TimerEvent_CHxs_Set(datetime_t</span> <span class="pre">time,</span> <span class="pre">uint8_t</span> <span class="pre">PinState,</span> <span class="pre">Repetition_event</span> <span class="pre">Repetition)</span></code></p></td>
+<td><p>Zet alle uitgangen volgens een bitmasker.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">TimerEvent_CHxn_Set(datetime_t</span> <span class="pre">time,</span> <span class="pre">Status_adjustment</span> <span class="pre">*Dout_n,</span> <span class="pre">uint32_t</span> <span class="pre">*repetition_Time,</span> <span class="pre">Repetition_event</span> <span class="pre">Repetition)</span></code></p></td>
+<td><p>Zet per kanaal aan, uit of ongewijzigd, met een eigen herhaaltijd.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">TimerEvent_Serial_Set(datetime_t</span> <span class="pre">time,</span> <span class="pre">Web_Receive*</span> <span class="pre">SerialData,</span> <span class="pre">Repetition_event</span> <span class="pre">Repetition)</span></code></p></td>
+<td><p>Verstuurt RS485- of CAN-data op een tijdstip.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">TimerEvent_printf_ALL(void)</span></code></p></td>
+<td><p>Toont alle actieve events op de seriële monitor.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">TimerEvent_Del_Number(uint8_t</span> <span class="pre">Event_Number)</span></code></p></td>
+<td><p>Verwijdert een event.</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">Repetition_event</span></code> bepaalt de herhaling: <code class="docutils literal notranslate"><span class="pre">Repetition_NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">_Milliseconds</span></code>,
+<code class="docutils literal notranslate"><span class="pre">_Seconds</span></code>, <code class="docutils literal notranslate"><span class="pre">_Minutes</span></code>, <code class="docutils literal notranslate"><span class="pre">_Hours</span></code>, <code class="docutils literal notranslate"><span class="pre">_Everyday</span></code>, <code class="docutils literal notranslate"><span class="pre">_Weekly</span></code> of <code class="docutils literal notranslate"><span class="pre">_Monthly</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">datetime_t</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datetime</span><span class="p">;</span><span class="w">   </span><span class="c1">// nu</span>
+<span class="n">t</span><span class="p">.</span><span class="n">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">minute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">TimerEvent_CHx_Set</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">Repetition_Everyday</span><span class="p">);</span><span class="w">   </span><span class="c1">// elke dag om 07:30 CH1 aan</span>
+</pre></div>
+</div>
+</section>
+<section id="bluetooth-le-ws-bluetooth">
+<h2>Bluetooth LE (WS_Bluetooth)<a class="headerlink" href="#bluetooth-le-ws-bluetooth" title="Link to this heading"></a></h2>
+<p>Het board adverteert als <code class="docutils literal notranslate"><span class="pre">ESP32-S3-POE-ETH-8DI-8DO</span></code> (NimBLE). Een client schrijft
+commando’s naar de RX-characteristic en ontvangt meldingen via TX.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie / symbool</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Bluetooth_Init()</span></code></p></td>
+<td><p>Start de BLE-server en de taak die elke seconde het IP-adres (<code class="docutils literal notranslate"><span class="pre">ipStr</span></code>) naar een verbonden client stuurt.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Bluetooth_SendData(char</span> <span class="pre">*Data)</span></code></p></td>
+<td><p>Stuurt tekst als notificatie naar alle verbonden clients.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SERVICE_UUID</span></code>, <code class="docutils literal notranslate"><span class="pre">RX_CHARACTERISTIC_UUID</span></code>, <code class="docutils literal notranslate"><span class="pre">TX_CHARACTERISTIC_UUID</span></code></p></td>
+<td><p>UUID’s van de service en characteristics.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Commando’s via RX:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data</p></th>
+<th class="head"><p>Actie</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x31</span></code>…<code class="docutils literal notranslate"><span class="pre">0x38</span></code></p></td>
+<td><p>Uitgang 1–8 wisselen</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">0x39</span></code> / <code class="docutils literal notranslate"><span class="pre">0x30</span></code></p></td>
+<td><p>Alle uitgangen aan / uit</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x06</span></code> + kanaal</p></td>
+<td><p>Externe Modbus RTU relaismodule via RS485 aansturen</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">0x0A</span> <span class="pre">0x0B</span></code> + data</p></td>
+<td><p>Data over RS485 versturen</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0x0A</span> <span class="pre">0x0C</span></code> + 4 bytes ID + 1 byte frametype + data</p></td>
+<td><p>Data over CAN versturen</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p><code class="docutils literal notranslate"><span class="pre">WS_Bluetooth</span></code> verwacht dat het project <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">ipStr[16]</span></code> definieert. In alle
+projecten gebeurt dat in <code class="docutils literal notranslate"><span class="pre">wifi_app.cpp</span></code>.</p>
+</div>
+</section>
+<section id="ethernet-ws-eth">
+<h2>Ethernet (WS_ETH)<a class="headerlink" href="#ethernet-ws-eth" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">ETH_Init(void)</span></code></p></td>
+<td><p>Start de W5500 (SPI: SCK 15, MISO 14, MOSI 13, CS 16, IRQ 12, RST 39) en <code class="docutils literal notranslate"><span class="pre">EthernetTask</span></code>. Het IP-adres komt via DHCP.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Acquisition_time(void)</span></code></p></td>
+<td><p>Haalt de tijd op via NTP (<code class="docutils literal notranslate"><span class="pre">pool.ntp.org</span></code>) en zet de RTC. Gebeurt automatisch zodra Ethernet een IP-adres heeft.</p></td>
+</tr>
+</tbody>
+</table>
+<p>De tijdzone is ingesteld met <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">timezone</span> <span class="pre">8</span></code> in <code class="docutils literal notranslate"><span class="pre">WS_ETH.h</span></code> (UTC+8). Pas deze
+aan voor Nederland: <code class="docutils literal notranslate"><span class="pre">1</span></code> in de winter, <code class="docutils literal notranslate"><span class="pre">2</span></code> in de zomer.</p>
+</section>
+<section id="sd-kaart-ws-sd">
+<h2>SD-kaart (WS_SD)<a class="headerlink" href="#sd-kaart-ws-sd" title="Link to this heading"></a></h2>
+<p>De kaart wordt in 1-bit SD_MMC-modus gebruikt (CLK 48, CMD 47, D0 45) en is
+gekoppeld als <code class="docutils literal notranslate"><span class="pre">/sdcard</span></code>. Gebruik daarna de standaard <code class="docutils literal notranslate"><span class="pre">SD_MMC</span></code>-functies van Arduino.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie / symbool</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">SD_Init()</span></code></p></td>
+<td><p>Koppelt de SD-kaart en bepaalt de grootte.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Flash_test()</span></code></p></td>
+<td><p>Toont de flashgrootte op de seriële monitor.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">File_Search(const</span> <span class="pre">char*</span> <span class="pre">directory,</span> <span class="pre">const</span> <span class="pre">char*</span> <span class="pre">fileName)</span></code></p></td>
+<td><p>Controleert of een bestand bestaat.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">uint16_t</span> <span class="pre">Folder_retrieval(const</span> <span class="pre">char*</span> <span class="pre">directory,</span> <span class="pre">const</span> <span class="pre">char*</span> <span class="pre">fileExtension,</span> <span class="pre">char</span> <span class="pre">File_Name[][100],</span> <span class="pre">uint16_t</span> <span class="pre">maxFiles)</span></code></p></td>
+<td><p>Zoekt bestanden met een extensie en geeft het aantal terug.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">uint16_t</span> <span class="pre">SDCard_Size</span></code>, <code class="docutils literal notranslate"><span class="pre">uint16_t</span> <span class="pre">Flash_Size</span></code></p></td>
+<td><p>Grootte van SD-kaart en flash (MB).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="i-o-expander-ws-tca9554pwr">
+<h2>I/O-expander (WS_TCA9554PWR)<a class="headerlink" href="#i-o-expander-ws-tca9554pwr" title="Link to this heading"></a></h2>
+<p>Laag-niveau toegang tot de TCA9554 (I²C-adres <code class="docutils literal notranslate"><span class="pre">0x20</span></code>), waarop de uitgangen zitten.
+Gebruik bij voorkeur de functies uit <code class="docutils literal notranslate"><span class="pre">WS_Dout</span></code>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">TCA9554PWR_Init(uint8_t</span> <span class="pre">PinMode</span> <span class="pre">=</span> <span class="pre">0x00,</span> <span class="pre">uint8_t</span> <span class="pre">PinState</span> <span class="pre">=</span> <span class="pre">0x00)</span></code></p></td>
+<td><p>Mode (0 = output, 1 = input) en begintoestand van alle pinnen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">Set_EXIO(uint8_t</span> <span class="pre">Pin,</span> <span class="pre">uint8_t</span> <span class="pre">State)</span></code> / <code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">Set_EXIOS(uint8_t</span> <span class="pre">PinState)</span></code></p></td>
+<td><p>Eén pin of alle pinnen zetten.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">Set_Toggle(uint8_t</span> <span class="pre">Pin)</span></code></p></td>
+<td><p>Pin wisselen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">uint8_t</span> <span class="pre">Read_EXIO(uint8_t</span> <span class="pre">Pin)</span></code> / <code class="docutils literal notranslate"><span class="pre">uint8_t</span> <span class="pre">Read_EXIOS(uint8_t</span> <span class="pre">REG)</span></code></p></td>
+<td><p>Pin of register lezen (<code class="docutils literal notranslate"><span class="pre">TCA9554_OUTPUT_REG</span></code> voor de uitgangstoestand).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Mode_EXIO(uint8_t</span> <span class="pre">Pin,</span> <span class="pre">uint8_t</span> <span class="pre">State)</span></code> / <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Mode_EXIOS(uint8_t</span> <span class="pre">PinState)</span></code></p></td>
+<td><p>Pinmodus instellen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">uint8_t</span> <span class="pre">Read_REG(uint8_t</span> <span class="pre">REG)</span></code> / <code class="docutils literal notranslate"><span class="pre">uint8_t</span> <span class="pre">Write_REG(uint8_t</span> <span class="pre">REG,</span> <span class="pre">uint8_t</span> <span class="pre">Data)</span></code></p></td>
+<td><p>Ruwe registertoegang.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="i2c-i2c-driver">
+<h2>I²C (I2C_Driver)<a class="headerlink" href="#i2c-i2c-driver" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functie</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">I2C_Init(void)</span></code></p></td>
+<td><p>Start de I²C-bus op SDA GPIO 42 en SCL GPIO 41.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">I2C_Read(uint8_t</span> <span class="pre">addr,</span> <span class="pre">uint8_t</span> <span class="pre">reg,</span> <span class="pre">uint8_t</span> <span class="pre">*data,</span> <span class="pre">uint32_t</span> <span class="pre">len)</span></code></p></td>
+<td><p>Leest <code class="docutils literal notranslate"><span class="pre">len</span></code> bytes vanaf register <code class="docutils literal notranslate"><span class="pre">reg</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">I2C_Write(uint8_t</span> <span class="pre">addr,</span> <span class="pre">uint8_t</span> <span class="pre">reg,</span> <span class="pre">const</span> <span class="pre">uint8_t</span> <span class="pre">*data,</span> <span class="pre">uint32_t</span> <span class="pre">len)</span></code></p></td>
+<td><p>Schrijft <code class="docutils literal notranslate"><span class="pre">len</span></code> bytes naar register <code class="docutils literal notranslate"><span class="pre">reg</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gedeelde-typen-ws-struct-en-ws-information">
+<h2>Gedeelde typen (WS_Struct en WS_Information)<a class="headerlink" href="#gedeelde-typen-ws-struct-en-ws-information" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type / define</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Trigger_event</span></code></p></td>
+<td><p>Bron van een actie: <code class="docutils literal notranslate"><span class="pre">DIN_Mode_Trigger</span></code>, <code class="docutils literal notranslate"><span class="pre">RS485_Mode_Trigger</span></code>, <code class="docutils literal notranslate"><span class="pre">Bluetooth_Mode_Trigger</span></code>, <code class="docutils literal notranslate"><span class="pre">WIFI_Mode_Trigger</span></code>, <code class="docutils literal notranslate"><span class="pre">RTC_Mode_Trigger</span></code>, <code class="docutils literal notranslate"><span class="pre">MQTT_Mode_Trigger</span></code>. Wordt gebruikt als <code class="docutils literal notranslate"><span class="pre">Mode_Flag</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Repetition_event</span></code></p></td>
+<td><p>Herhaling van timer-events (zie <a class="reference internal" href="#timer-events-ws-rtc"><span class="xref myst">Timer-events</span></a>).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Status_adjustment</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">STATE_Closs</span></code> (uit), <code class="docutils literal notranslate"><span class="pre">STATE_Open</span></code> (aan), <code class="docutils literal notranslate"><span class="pre">STATE_Retain</span></code> (ongewijzigd).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Web_Receive</span></code></p></td>
+<td><p>Beschrijving van een RS485- of CAN-bericht voor timer-events.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Extension_Enable</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code> (standaard): RS485-commando’s sturen een externe Modbus relaismodule aan. Overschrijfbaar met <code class="docutils literal notranslate"><span class="pre">-DExtension_Enable=0</span></code> in <code class="docutils literal notranslate"><span class="pre">platformio.ini</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Voettekst">
+        <a href="template.html" class="btn btn-neutral float-left" title="Template-project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Vorige</a>
+        <a href="pages.html" class="btn btn-neutral float-right" title="Documentatie bijwerken en publiceren" accesskey="n" rel="next">Volgende <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Gerard Harkema.</p>
+  </div>
+
+  Gebouwd met <a href="https://www.sphinx-doc.org/">Sphinx</a> met een
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thema</a>
+    geleverd door <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

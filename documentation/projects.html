@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="nl" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projecten &mdash; Waveshare ESP32-S3-POE-ETH-8DI-8DO 0.1 documentatie</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a57088fb"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=e4d38c6a"></script>
+      <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Template-project" href="template.html" />
+    <link rel="prev" title="Aan de slag" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Waveshare ESP32-S3-POE-ETH-8DI-8DO
+              <img src="../_static/avans-hogeschool-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Zoek in documentatie" aria-label="Zoek in documentatie" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigatiemenu">
+              <p class="caption" role="heading"><span class="caption-text">Inhoudsopgave:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Aan de slag</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Projecten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bestanden-per-project">Bestanden per project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuratie">Configuratie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#webinterface-app-sta-en-mqtt">Webinterface (app, sta en mqtt)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="template.html">Template-project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Library-referentie: waveshare_board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Documentatie bijwerken en publiceren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Veelgestelde vragen (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Referenties</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Navigatiemenu voor mobiel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Waveshare ESP32-S3-POE-ETH-8DI-8DO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Paginanavigatie">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Projecten</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation/projects.md.txt" rel="nofollow"> Bekijk paginabron</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="projecten">
+<h1>Projecten<a class="headerlink" href="#projecten" title="Link to this heading"></a></h1>
+<p>De workspace bevat vier firmwareprojecten. Ze delen allemaal de board-drivers uit
+<code class="docutils literal notranslate"><span class="pre">libraries/waveshare_board</span></code>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Project</p></th>
+<th class="head"><p>Netwerk</p></th>
+<th class="head"><p>Kenmerken</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">main_wifi_template</span></code></p></td>
+<td><p>WiFi AP <strong>of</strong> STA, kiesbaar in <code class="docutils literal notranslate"><span class="pre">platformio.ini</span></code></p></td>
+<td><p>Startpunt voor nieuwe firmware. Lege webpagina en een plek voor eigen FreeRTOS-taken.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">main_wifi_app</span></code></p></td>
+<td><p>WiFi access point</p></td>
+<td><p>Board maakt een eigen netwerk. Webinterface op <code class="docutils literal notranslate"><span class="pre">http://192.168.4.1</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">main_wifi_sta</span></code></p></td>
+<td><p>WiFi station + Ethernet</p></td>
+<td><p>Board verbindt met een bestaand netwerk en toont de webinterface op het verkregen IP-adres.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">main_mqtt_all</span></code></p></td>
+<td><p>WiFi station + Ethernet + MQTT</p></td>
+<td><p>Als <code class="docutils literal notranslate"><span class="pre">main_wifi_sta</span></code>, aangevuld met MQTT naar de Waveshare cloud.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="bestanden-per-project">
+<h2>Bestanden per project<a class="headerlink" href="#bestanden-per-project" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bestand</p></th>
+<th class="head"><p>Inhoud</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">src/main.cpp</span></code> / <code class="docutils literal notranslate"><span class="pre">src/MAIN_*.cpp</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">setup()</span></code> en <code class="docutils literal notranslate"><span class="pre">loop()</span></code>; initialiseert alle modules</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">src/wifi_app.cpp</span></code> / <code class="docutils literal notranslate"><span class="pre">src/wifi_app.h</span></code></p></td>
+<td><p>WiFi (AP of STA) en de webserver</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">src/WS_MQTT.cpp</span></code> / <code class="docutils literal notranslate"><span class="pre">src/WS_MQTT.h</span></code></p></td>
+<td><p>Alleen <code class="docutils literal notranslate"><span class="pre">main_mqtt_all</span></code>: MQTT-client en brokerinstellingen</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">src/application_tasks.cpp</span></code> / <code class="docutils literal notranslate"><span class="pre">.h</span></code></p></td>
+<td><p>Alleen het template: eigen applicatietaken</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">platformio.ini</span></code></p></td>
+<td><p>Board-, build- en library-instellingen</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="configuratie">
+<h2>Configuratie<a class="headerlink" href="#configuratie" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Project</p></th>
+<th class="head"><p>WiFi-instellingen</p></th>
+<th class="head"><p>Overige instellingen</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">main_wifi_template</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">platformio.ini</span></code> (<code class="docutils literal notranslate"><span class="pre">custom_wifi_*</span></code>)</p></td>
+<td><p>zie <a class="reference internal" href="template.html"><span class="std std-doc">Template-project</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">main_wifi_app</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">src/wifi_app.h</span></code> (<code class="docutils literal notranslate"><span class="pre">APSSID</span></code>, <code class="docutils literal notranslate"><span class="pre">APPSK</span></code>)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">main_wifi_sta</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">src/wifi_app.h</span></code> (<code class="docutils literal notranslate"><span class="pre">STASSID</span></code>, <code class="docutils literal notranslate"><span class="pre">STAPSK</span></code>)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">main_mqtt_all</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">src/wifi_app.h</span></code> (<code class="docutils literal notranslate"><span class="pre">STASSID</span></code>, <code class="docutils literal notranslate"><span class="pre">STAPSK</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">src/WS_MQTT.h</span></code> (<code class="docutils literal notranslate"><span class="pre">MQTT_Server</span></code>, <code class="docutils literal notranslate"><span class="pre">MQTT_Port</span></code>, <code class="docutils literal notranslate"><span class="pre">MQTT_ID</span></code>, <code class="docutils literal notranslate"><span class="pre">MQTT_Pub</span></code>, <code class="docutils literal notranslate"><span class="pre">MQTT_Sub</span></code>)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Waarschuwing</p>
+<p>De webinterfaces kunnen fysieke uitgangen schakelen. Houd het board op een
+vertrouwd netwerk en zet geen echte wachtwoorden in een publieke repository.</p>
+</div>
+</section>
+<section id="webinterface-app-sta-en-mqtt">
+<h2>Webinterface (app, sta en mqtt)<a class="headerlink" href="#webinterface-app-sta-en-mqtt" title="Link to this heading"></a></h2>
+<p>De volledige firmwarevarianten bieden via de webserver onder meer:</p>
+<ul class="simple">
+<li><p>uitgangen CH1–CH8 schakelen (<code class="docutils literal notranslate"><span class="pre">/Switch1</span></code> … <code class="docutils literal notranslate"><span class="pre">/Switch8</span></code>, <code class="docutils literal notranslate"><span class="pre">/AllOn</span></code>, <code class="docutils literal notranslate"><span class="pre">/AllOff</span></code>);</p></li>
+<li><p>status van uitgangen en ingangen opvragen (<code class="docutils literal notranslate"><span class="pre">/getData</span></code>);</p></li>
+<li><p>tijdgestuurde (RTC) events aanmaken en verwijderen;</p></li>
+<li><p>RS485- en CAN-data versturen en ontvangen, en de baudrate/bitrate instellen.</p></li>
+</ul>
+<p>Het template heeft deze pagina’s niet. Daar serveert de webserver een lege pagina.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Voettekst">
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Aan de slag" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Vorige</a>
+        <a href="template.html" class="btn btn-neutral float-right" title="Template-project" accesskey="n" rel="next">Volgende <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Gerard Harkema.</p>
+  </div>
+
+  Gebouwd met <a href="https://www.sphinx-doc.org/">Sphinx</a> met een
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thema</a>
+    geleverd door <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

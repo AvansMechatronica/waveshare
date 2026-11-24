@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="nl" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentatie bijwerken en publiceren &mdash; Waveshare ESP32-S3-POE-ETH-8DI-8DO 0.1 documentatie</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a57088fb"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=e4d38c6a"></script>
+      <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Veelgestelde vragen (FAQ)" href="faq.html" />
+    <link rel="prev" title="Library-referentie: waveshare_board" href="library.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Waveshare ESP32-S3-POE-ETH-8DI-8DO
+              <img src="../_static/avans-hogeschool-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Zoek in documentatie" aria-label="Zoek in documentatie" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigatiemenu">
+              <p class="caption" role="heading"><span class="caption-text">Inhoudsopgave:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Aan de slag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projecten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="template.html">Template-project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Library-referentie: waveshare_board</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentatie bijwerken en publiceren</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#structuur">Structuur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lokaal-bouwen">Lokaal bouwen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#publiceren-op-github-pages">Publiceren op GitHub Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#valkuilen">Valkuilen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Veelgestelde vragen (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Referenties</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Navigatiemenu voor mobiel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Waveshare ESP32-S3-POE-ETH-8DI-8DO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Paginanavigatie">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Documentatie bijwerken en publiceren</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation/pages.md.txt" rel="nofollow"> Bekijk paginabron</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="documentatie-bijwerken-en-publiceren">
+<h1>Documentatie bijwerken en publiceren<a class="headerlink" href="#documentatie-bijwerken-en-publiceren" title="Link to this heading"></a></h1>
+<p>Deze documentatie wordt gemaakt met <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> en
+<a class="reference external" href="https://myst-parser.readthedocs.io/">MyST</a>, zodat de pagina’s in Markdown
+geschreven kunnen worden. Bij elke <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> naar <code class="docutils literal notranslate"><span class="pre">main</span></code> bouwt een GitHub Action
+de site en zet die op GitHub Pages.</p>
+<section id="structuur">
+<h2>Structuur<a class="headerlink" href="#structuur" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>documentation/
+├── conf.py              Sphinx-configuratie (projectnaam, thema, extensies)
+├── index.rst            startpagina en inhoudsopgave
+├── requirements.txt     Python-pakketten voor het bouwen
+├── documentation/       de pagina&#39;s (Markdown)
+├── images/              afbeeldingen
+└── _static/             logo en statische bestanden
+.github/workflows/documentation.yml   GitHub Action die bouwt en publiceert
+</pre></div>
+</div>
+<p>Een nieuwe pagina voeg je toe door een <code class="docutils literal notranslate"><span class="pre">.md</span></code>-bestand in <code class="docutils literal notranslate"><span class="pre">documentation/documentation/</span></code>
+te zetten en het op te nemen in de <code class="docutils literal notranslate"><span class="pre">toctree</span></code> van <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>.</p>
+</section>
+<section id="lokaal-bouwen">
+<h2>Lokaal bouwen<a class="headerlink" href="#lokaal-bouwen" title="Link to this heading"></a></h2>
+<p>Vanuit de hoofdmap van de repository:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+Windows (PowerShell)</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="p">.</span><span class="n">venv</span>
+<span class="p">.</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">documentation</span><span class="p">/</span><span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+<span class="n">sphinx-build</span> <span class="n">documentation</span> <span class="n">_build</span>
+<span class="nb">start </span><span class="n">_build</span><span class="p">\</span><span class="n">index</span><span class="p">.</span><span class="n">html</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+Linux / macOS</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>documentation/requirements.txt
+sphinx-build<span class="w"> </span>documentation<span class="w"> </span>_build
+open<span class="w"> </span>_build/index.html
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="publiceren-op-github-pages">
+<h2>Publiceren op GitHub Pages<a class="headerlink" href="#publiceren-op-github-pages" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Commit en push je wijzigingen naar <code class="docutils literal notranslate"><span class="pre">main</span></code>:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Documentatie bijgewerkt&quot;</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>De workflow <strong>documentation</strong> bouwt de site en zet het resultaat op de branch <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>.</p></li>
+<li><p>Stel eenmalig in de repository-instellingen onder <strong>Pages</strong> de bron in op de
+branch <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> (map <code class="docutils literal notranslate"><span class="pre">/</span> <span class="pre">(root)</span></code>) en klik op <strong>Save</strong>.</p></li>
+</ol>
+<p><img alt="GitHub Pages instellingen" src="../_images/github_settings.png" /></p>
+<p>Daarna staat de documentatie op <code class="docutils literal notranslate"><span class="pre">https://&lt;gebruiker&gt;.github.io/&lt;repository&gt;/</span></code>.</p>
+</section>
+<section id="valkuilen">
+<h2>Valkuilen<a class="headerlink" href="#valkuilen" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Controleer in het tabblad <strong>Actions</strong> of de workflow slaagt. Een fout in een
+pagina (bijvoorbeeld een ontbrekend bestand in de <code class="docutils literal notranslate"><span class="pre">toctree</span></code>) laat de build mislukken.</p></li>
+<li><p>De workflow heeft schrijfrechten nodig (<code class="docutils literal notranslate"><span class="pre">permissions:</span> <span class="pre">contents:</span> <span class="pre">write</span></code>) om de
+branch <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> bij te werken.</p></li>
+<li><p>Publiceren gebeurt alleen bij een push naar <code class="docutils literal notranslate"><span class="pre">main</span></code>; bij een pull request wordt
+alleen gebouwd.</p></li>
+</ul>
+<p><img alt="GitHub Actions status" src="../_images/github_actions.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Voettekst">
+        <a href="library.html" class="btn btn-neutral float-left" title="Library-referentie: waveshare_board" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Vorige</a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="Veelgestelde vragen (FAQ)" accesskey="n" rel="next">Volgende <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Gerard Harkema.</p>
+  </div>
+
+  Gebouwd met <a href="https://www.sphinx-doc.org/">Sphinx</a> met een
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thema</a>
+    geleverd door <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

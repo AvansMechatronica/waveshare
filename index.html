@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="nl" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waveshare ESP32-S3-POE-ETH-8DI-8DO firmware &mdash; Waveshare ESP32-S3-POE-ETH-8DI-8DO 0.1 documentatie</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=6a604523" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=a57088fb"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/translations.js?v=e4d38c6a"></script>
+      <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="_static/design-tabs.js?v=fcb327ea"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Inleiding" href="documentation/overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Waveshare ESP32-S3-POE-ETH-8DI-8DO
+              <img src="_static/avans-hogeschool-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Zoek in documentatie" aria-label="Zoek in documentatie" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigatiemenu">
+              <p class="caption" role="heading"><span class="caption-text">Inhoudsopgave:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="documentation/overview.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/getting_started.html">Aan de slag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/projects.html">Projecten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/template.html">Template-project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/library.html">Library-referentie: waveshare_board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/pages.html">Documentatie bijwerken en publiceren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/faq.html">Veelgestelde vragen (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/references.html">Referenties</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Navigatiemenu voor mobiel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Waveshare ESP32-S3-POE-ETH-8DI-8DO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Paginanavigatie">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Waveshare ESP32-S3-POE-ETH-8DI-8DO firmware</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> Bekijk paginabron</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="waveshare-esp32-s3-poe-eth-8di-8do-firmware">
+<h1>Waveshare ESP32-S3-POE-ETH-8DI-8DO firmware<a class="headerlink" href="#waveshare-esp32-s3-poe-eth-8di-8do-firmware" title="Link to this heading"></a></h1>
+<p><strong>PlatformIO-firmware en gedeelde board-library voor het Waveshare ESP32-S3-POE-ETH-8DI-8DO board.</strong></p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Inhoudsopgave:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="documentation/overview.html">Inleiding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation/overview.html#blokschema">Blokschema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/overview.html#opbouw-van-de-workspace">Opbouw van de workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/overview.html#waar-begin-ik">Waar begin ik?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/getting_started.html">Aan de slag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation/getting_started.html#benodigdheden">Benodigdheden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/getting_started.html#repository-clonen">Repository clonen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/getting_started.html#workspace-openen">Workspace openen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/getting_started.html#bouwen-uploaden-en-monitoren">Bouwen, uploaden en monitoren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/getting_started.html#board-instellingen-in-platformio-ini">Board-instellingen in platformio.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/getting_started.html#afhankelijkheden">Afhankelijkheden</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/projects.html">Projecten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation/projects.html#bestanden-per-project">Bestanden per project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/projects.html#configuratie">Configuratie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/projects.html#webinterface-app-sta-en-mqtt">Webinterface (app, sta en mqtt)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/template.html">Template-project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation/template.html#bestanden">Bestanden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/template.html#wifi-modus-kiezen">WiFi-modus kiezen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/template.html#wifi-parameters">WiFi-parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/template.html#wifi-app">wifi_app</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="documentation/template.html#eigen-webpagina-s-toevoegen">Eigen webpagina’s toevoegen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/template.html#application-tasks">application_tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/template.html#opstartvolgorde">Opstartvolgorde</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/library.html">Library-referentie: waveshare_board</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#digitale-uitgangen-ws-dout">Digitale uitgangen (WS_Dout)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#digitale-ingangen-ws-din">Digitale ingangen (WS_DIN)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#rgb-led-en-zoemer-ws-gpio">RGB-led en zoemer (WS_GPIO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#rs485-ws-rs485">RS485 (WS_RS485)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#can-ws-can">CAN (WS_CAN)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#real-time-clock-ws-pcf85063">Real-time clock (WS_PCF85063)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#timer-events-ws-rtc">Timer-events (WS_RTC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#bluetooth-le-ws-bluetooth">Bluetooth LE (WS_Bluetooth)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#ethernet-ws-eth">Ethernet (WS_ETH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#sd-kaart-ws-sd">SD-kaart (WS_SD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#i-o-expander-ws-tca9554pwr">I/O-expander (WS_TCA9554PWR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#i2c-i2c-driver">I²C (I2C_Driver)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/library.html#gedeelde-typen-ws-struct-en-ws-information">Gedeelde typen (WS_Struct en WS_Information)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/pages.html">Documentatie bijwerken en publiceren</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation/pages.html#structuur">Structuur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/pages.html#lokaal-bouwen">Lokaal bouwen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/pages.html#publiceren-op-github-pages">Publiceren op GitHub Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/pages.html#valkuilen">Valkuilen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/faq.html">Veelgestelde vragen (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/references.html">Referenties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation/references.html#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/references.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/references.html#documentatie">Documentatie</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="license">
+<h1>License<a class="headerlink" href="#license" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">License CC BY-NC-SA 4.0</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Voettekst">
+        <a href="documentation/overview.html" class="btn btn-neutral float-right" title="Inleiding" accesskey="n" rel="next">Volgende <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Gerard Harkema.</p>
+  </div>
+
+  Gebouwd met <a href="https://www.sphinx-doc.org/">Sphinx</a> met een
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thema</a>
+    geleverd door <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

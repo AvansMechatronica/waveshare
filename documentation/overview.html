@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="nl" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inleiding &mdash; Waveshare ESP32-S3-POE-ETH-8DI-8DO 0.1 documentatie</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a57088fb"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=e4d38c6a"></script>
+      <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Aan de slag" href="getting_started.html" />
+    <link rel="prev" title="Waveshare ESP32-S3-POE-ETH-8DI-8DO firmware" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Waveshare ESP32-S3-POE-ETH-8DI-8DO
+              <img src="../_static/avans-hogeschool-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Zoek in documentatie" aria-label="Zoek in documentatie" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigatiemenu">
+              <p class="caption" role="heading"><span class="caption-text">Inhoudsopgave:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Inleiding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#blokschema">Blokschema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opbouw-van-de-workspace">Opbouw van de workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#waar-begin-ik">Waar begin ik?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Aan de slag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projecten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="template.html">Template-project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Library-referentie: waveshare_board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Documentatie bijwerken en publiceren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Veelgestelde vragen (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Referenties</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Navigatiemenu voor mobiel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Waveshare ESP32-S3-POE-ETH-8DI-8DO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Paginanavigatie">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Inleiding</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation/overview.md.txt" rel="nofollow"> Bekijk paginabron</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="inleiding">
+<h1>Inleiding<a class="headerlink" href="#inleiding" title="Link to this heading"></a></h1>
+<p>Deze documentatie beschrijft de PlatformIO-firmware voor het
+<a class="reference external" href="https://www.waveshare.com/esp32-s3-poe-eth-8di-8do.htm">Waveshare ESP32-S3-POE-ETH-8DI-8DO</a>
+board. Het board is gebaseerd op de ESP32-S3-WROOM-1U-N16R8 module (16 MB flash,
+8 MB PSRAM) en heeft onder andere:</p>
+<ul class="simple">
+<li><p>8 digitale ingangen (DIN) en 8 digitale uitgangen (Dout, via een TCA9554 I/O-expander)</p></li>
+<li><p>RS485 en CAN (TWAI)</p></li>
+<li><p>W5500 Ethernet (met PoE-voeding)</p></li>
+<li><p>WiFi en Bluetooth LE</p></li>
+<li><p>PCF85063 real-time clock (RTC)</p></li>
+<li><p>micro-SD-kaartslot</p></li>
+<li><p>RGB-led en zoemer</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/esp32-s3-poe-eth-8di-8do.png"><img alt="Waveshare ESP32-S3-POE-ETH-8DI-8DO" src="../_images/esp32-s3-poe-eth-8di-8do.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Het ESP32-S3-POE-ETH-8DI-8DO board. Bron:
+<a class="reference external" href="https://docs.waveshare.com/ESP32-S3-POE-ETH-8DI-8DO">Waveshare documentatie</a>.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="blokschema">
+<h2>Blokschema<a class="headerlink" href="#blokschema" title="Link to this heading"></a></h2>
+<p>Het blokschema laat zien welke GPIO-pinnen van de ESP32-S3 met welke
+onderdelen verbonden zijn. Dezelfde pinnen staan in de headers van de
+<a class="reference internal" href="library.html"><span class="std std-doc">Library-referentie</span></a>.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/esp32-s3-poe-eth-8di-8do_block_diagram.png"><img alt="Blokschema van het ESP32-S3-POE-ETH-8DI-8DO board" src="../_images/esp32-s3-poe-eth-8di-8do_block_diagram.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Blokschema met de GPIO-toewijzing. Bron:
+<a class="reference external" href="https://docs.waveshare.com/ESP32-S3-POE-ETH-8DI-8DO">Waveshare documentatie</a>.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Onderdeel</p></th>
+<th class="head"><p>Aansluiting</p></th>
+<th class="head"><p>Library-module</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Digitale uitgangen 1–8</p></td>
+<td><p>TCA9554 EXIO1–EXIO8 (I²C)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_Dout</span></code>, <code class="docutils literal notranslate"><span class="pre">WS_TCA9554PWR</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Digitale ingangen 1–8</p></td>
+<td><p>GPIO 4–11</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_DIN</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>I²C (TCA9554, RTC)</p></td>
+<td><p>SDA GPIO 42, SCL GPIO 41</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">I2C_Driver</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>RTC PCF85063</p></td>
+<td><p>I²C, interrupt GPIO 40</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_PCF85063</span></code>, <code class="docutils literal notranslate"><span class="pre">WS_RTC</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>RS485</p></td>
+<td><p>TX GPIO 17, RX GPIO 18, richting GPIO 21</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_RS485</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>CAN</p></td>
+<td><p>TX GPIO 2, RX GPIO 3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_CAN</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>W5500 Ethernet</p></td>
+<td><p>INT 12, MOSI 13, MISO 14, SCLK 15, CS 16</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_ETH</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>TF-kaart</p></td>
+<td><p>D0 GPIO 45, CMD GPIO 47, CLK GPIO 48</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_SD</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>RGB-led</p></td>
+<td><p>GPIO 38</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_GPIO</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Zoemer</p></td>
+<td><p>GPIO 46</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WS_GPIO</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>BOOT-knop</p></td>
+<td><p>GPIO 0</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Meer informatie, zoals schema’s, afmetingen en voorbeeldcode, vind je in de
+<a class="reference external" href="https://docs.waveshare.com/ESP32-S3-POE-ETH-8DI-8DO">Waveshare documentatie</a>.</p>
+</section>
+<section id="opbouw-van-de-workspace">
+<h2>Opbouw van de workspace<a class="headerlink" href="#opbouw-van-de-workspace" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>waveshare/
+├── libraries/
+│   ├── waveshare_board/      gedeelde board-drivers (WS_*, I2C_Driver)
+│   ├── ArduinoJson/
+│   ├── NTPClient/
+│   └── PubSubClient/
+├── main_wifi_template/       template: AP of STA via platformio.ini, lege webpagina
+├── main_wifi_app/            WiFi access-point firmware met volledige webinterface
+├── main_wifi_sta/            WiFi station firmware met volledige webinterface
+├── main_mqtt_all/            WiFi station + MQTT (Waveshare cloud)
+├── documentation/            deze documentatie (Sphinx / GitHub Pages)
+└── waveshare.code-workspace  VS Code workspace met alle projecten
+</pre></div>
+</div>
+<p>Alle projecten gebruiken dezelfde board-drivers uit <code class="docutils literal notranslate"><span class="pre">libraries/waveshare_board</span></code>.
+PlatformIO vindt deze library via <code class="docutils literal notranslate"><span class="pre">lib_extra_dirs</span> <span class="pre">=</span> <span class="pre">../libraries</span></code> in de
+<code class="docutils literal notranslate"><span class="pre">platformio.ini</span></code> van elk project. In de <code class="docutils literal notranslate"><span class="pre">src</span></code>-map van een project staan alleen
+de projectspecifieke bestanden, zoals <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code> en <code class="docutils literal notranslate"><span class="pre">wifi_app.cpp/.h</span></code>.</p>
+</section>
+<section id="waar-begin-ik">
+<h2>Waar begin ik?<a class="headerlink" href="#waar-begin-ik" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Nieuw project starten: kopieer <code class="docutils literal notranslate"><span class="pre">main_wifi_template</span></code> en lees
+<a class="reference internal" href="template.html"><span class="std std-doc">Template-project</span></a>.</p></li>
+<li><p>Bouwen en uploaden: zie <a class="reference internal" href="getting_started.html"><span class="std std-doc">Aan de slag</span></a>.</p></li>
+<li><p>Overzicht van de bestaande firmwarevarianten: zie <a class="reference internal" href="projects.html"><span class="std std-doc">Projecten</span></a>.</p></li>
+<li><p>Functies van de board-drivers: zie <a class="reference internal" href="library.html"><span class="std std-doc">Library-referentie</span></a>.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Voettekst">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Waveshare ESP32-S3-POE-ETH-8DI-8DO firmware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Vorige</a>
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Aan de slag" accesskey="n" rel="next">Volgende <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Gerard Harkema.</p>
+  </div>
+
+  Gebouwd met <a href="https://www.sphinx-doc.org/">Sphinx</a> met een
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thema</a>
+    geleverd door <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

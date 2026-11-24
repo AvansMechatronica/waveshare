@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="nl" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template-project &mdash; Waveshare ESP32-S3-POE-ETH-8DI-8DO 0.1 documentatie</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a57088fb"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=e4d38c6a"></script>
+      <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="Library-referentie: waveshare_board" href="library.html" />
+    <link rel="prev" title="Projecten" href="projects.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Waveshare ESP32-S3-POE-ETH-8DI-8DO
+              <img src="../_static/avans-hogeschool-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Zoek in documentatie" aria-label="Zoek in documentatie" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigatiemenu">
+              <p class="caption" role="heading"><span class="caption-text">Inhoudsopgave:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Aan de slag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projecten</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Template-project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bestanden">Bestanden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wifi-modus-kiezen">WiFi-modus kiezen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wifi-parameters">WiFi-parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wifi-app">wifi_app</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eigen-webpagina-s-toevoegen">Eigen webpagina’s toevoegen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#application-tasks">application_tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opstartvolgorde">Opstartvolgorde</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Library-referentie: waveshare_board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Documentatie bijwerken en publiceren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Veelgestelde vragen (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Referenties</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Navigatiemenu voor mobiel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Waveshare ESP32-S3-POE-ETH-8DI-8DO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Paginanavigatie">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Template-project</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation/template.md.txt" rel="nofollow"> Bekijk paginabron</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="template-project">
+<h1>Template-project<a class="headerlink" href="#template-project" title="Link to this heading"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">main_wifi_template</span></code> is het startpunt voor nieuwe firmware. Het combineert de
+access-point- en station-varianten in één project:</p>
+<ul class="simple">
+<li><p>WiFi-modus (AP of STA) en alle WiFi-parameters stel je in via <code class="docutils literal notranslate"><span class="pre">platformio.ini</span></code>;</p></li>
+<li><p>de webserver serveert een lege pagina, die je zelf invult;</p></li>
+<li><p>eigen FreeRTOS-taken zet je in <code class="docutils literal notranslate"><span class="pre">application_tasks.cpp</span></code>.</p></li>
+</ul>
+<section id="bestanden">
+<h2>Bestanden<a class="headerlink" href="#bestanden" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>main_wifi_template/
+├── platformio.ini           environments voor AP en STA, WiFi-parameters
+└── src/
+    ├── main.cpp             setup(): initialiseert board, WiFi en applicatietaken
+    ├── wifi_app.cpp/.h      WiFi (AP of STA) en webserver
+    └── application_tasks.cpp/.h   eigen applicatietaken
+</pre></div>
+</div>
+</section>
+<section id="wifi-modus-kiezen">
+<h2>WiFi-modus kiezen<a class="headerlink" href="#wifi-modus-kiezen" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">platformio.ini</span></code> heeft twee environments:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Environment</p></th>
+<th class="head"><p>Modus</p></th>
+<th class="head"><p>Gedrag</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">waveshare_esp32s3_ap</span></code></p></td>
+<td><p>Access point</p></td>
+<td><p>Het board maakt een eigen netwerk. Open <code class="docutils literal notranslate"><span class="pre">http://192.168.4.1</span></code> (of het ingestelde IP-adres).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">waveshare_esp32s3_sta</span></code></p></td>
+<td><p>Station</p></td>
+<td><p>Het board verbindt met een bestaand netwerk. Het IP-adres (DHCP) verschijnt in de seriële monitor. Bij verbindingsverlies wordt automatisch opnieuw verbonden.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Je kiest de modus met <code class="docutils literal notranslate"><span class="pre">default_envs</span></code> in de sectie <code class="docutils literal notranslate"><span class="pre">[platformio]</span></code>, via de
+PlatformIO-statusbalk in VS Code of met <code class="docutils literal notranslate"><span class="pre">pio</span> <span class="pre">run</span> <span class="pre">-e</span> <span class="pre">&lt;environment&gt;</span></code>.</p>
+</section>
+<section id="wifi-parameters">
+<h2>WiFi-parameters<a class="headerlink" href="#wifi-parameters" title="Link to this heading"></a></h2>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[env:waveshare_esp32s3_ap]</span>
+<span class="na">custom_wifi_ssid</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s">ESP32-S3-POE-ETH-8DI-8DO</span>
+<span class="na">custom_wifi_password</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">waveshare</span>
+<span class="na">custom_wifi_ap_ip</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">192,168,4,1</span>
+<span class="na">custom_wifi_ap_subnet</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">255,255,255,0</span>
+<span class="na">custom_wifi_ap_channel</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
+<span class="na">custom_wifi_ap_max_clients</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4</span>
+
+<span class="k">[env:waveshare_esp32s3_sta]</span>
+<span class="na">custom_wifi_ssid</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">YourWiFiSSID</span>
+<span class="na">custom_wifi_password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">YourWiFiPassword</span>
+<span class="na">custom_wifi_hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">esp32s3-8di-8do</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Optie</p></th>
+<th class="head"><p>Modus</p></th>
+<th class="head"><p>Betekenis</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">custom_wifi_ssid</span></code></p></td>
+<td><p>AP, STA</p></td>
+<td><p>Netwerknaam (aangemaakt in AP, verbonden in STA)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">custom_wifi_password</span></code></p></td>
+<td><p>AP, STA</p></td>
+<td><p>Wachtwoord. In AP-mode minimaal 8 tekens, of leeg voor een open netwerk</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">custom_wifi_ap_ip</span></code></p></td>
+<td><p>AP</p></td>
+<td><p>IP-adres en gateway van het board, met komma’s: <code class="docutils literal notranslate"><span class="pre">192,168,4,1</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">custom_wifi_ap_subnet</span></code></p></td>
+<td><p>AP</p></td>
+<td><p>Subnetmasker, met komma’s: <code class="docutils literal notranslate"><span class="pre">255,255,255,0</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">custom_wifi_ap_channel</span></code></p></td>
+<td><p>AP</p></td>
+<td><p>WiFi-kanaal (1–13)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">custom_wifi_ap_max_clients</span></code></p></td>
+<td><p>AP</p></td>
+<td><p>Maximaal aantal gelijktijdige clients (1–10)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">custom_wifi_hostname</span></code></p></td>
+<td><p>STA</p></td>
+<td><p>Hostnaam richting de router</p></td>
+</tr>
+</tbody>
+</table>
+<p>PlatformIO zet deze opties om naar build flags (<code class="docutils literal notranslate"><span class="pre">APP_WIFI_MODE_AP</span></code> of
+<code class="docutils literal notranslate"><span class="pre">APP_WIFI_MODE_STA</span></code>, <code class="docutils literal notranslate"><span class="pre">APP_WIFI_SSID</span></code>, <code class="docutils literal notranslate"><span class="pre">APP_WIFI_PASSWORD</span></code>, <code class="docutils literal notranslate"><span class="pre">APP_WIFI_AP_*</span></code>,
+<code class="docutils literal notranslate"><span class="pre">APP_WIFI_HOSTNAME</span></code>). <code class="docutils literal notranslate"><span class="pre">wifi_app.h</span></code> geeft een duidelijke compileerfout als er geen
+modus of allebei de modi gekozen zijn.</p>
+</section>
+<section id="wifi-app">
+<h2>wifi_app<a class="headerlink" href="#wifi-app" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbool</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">WIFI_Init()</span></code></p></td>
+<td><p>Registreert de webpagina’s en start de taak <code class="docutils literal notranslate"><span class="pre">WifiTask</span></code> (core 0, prioriteit 3).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">WifiTask(void</span> <span class="pre">*parameter)</span></code></p></td>
+<td><p>AP: start het access point en de webserver. STA: verbindt, start de webserver en verbindt opnieuw bij verbindingsverlies. Verwerkt daarna webverzoeken.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">handleRoot()</span></code></p></td>
+<td><p>Levert de (lege) HTML-startpagina op <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WebServer</span> <span class="pre">server</span></code></p></td>
+<td><p>De webserver op poort 80.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">ipStr[16]</span></code></p></td>
+<td><p>Huidig IP-adres als tekst. Wordt ook via Bluetooth verstuurd.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">WIFI_Connection</span></code></p></td>
+<td><p>AP: <code class="docutils literal notranslate"><span class="pre">true</span></code> zodra het AP actief is. STA: <code class="docutils literal notranslate"><span class="pre">true</span></code> zolang er verbinding is.</p></td>
+</tr>
+</tbody>
+</table>
+<p>De RGB-led geeft de status aan: groen bij een actief AP of een geslaagde
+verbinding, rood knipperend tijdens het verbinden in STA-mode.</p>
+<section id="eigen-webpagina-s-toevoegen">
+<h3>Eigen webpagina’s toevoegen<a class="headerlink" href="#eigen-webpagina-s-toevoegen" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Zet de inhoud van de startpagina in <code class="docutils literal notranslate"><span class="pre">handleRoot()</span></code> in <code class="docutils literal notranslate"><span class="pre">wifi_app.cpp</span></code>.</p></li>
+<li><p>Schrijf een handler voor elke extra URL en registreer die in <code class="docutils literal notranslate"><span class="pre">Web_Register()</span></code>:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleStatus</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">server</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">din1</span><span class="se">\&quot;</span><span class="s">:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">DIN_Flag</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;}&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Web_Register</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">server</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">handleRoot</span><span class="p">);</span>
+<span class="w">  </span><span class="n">server</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">&quot;/status&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">handleStatus</span><span class="p">);</span>
+<span class="w">  </span><span class="n">server</span><span class="p">.</span><span class="n">onNotFound</span><span class="p">(</span><span class="n">handleNotFound</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="application-tasks">
+<h2>application_tasks<a class="headerlink" href="#application-tasks" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">StartApplicationTasks()</span></code> wordt aan het einde van <code class="docutils literal notranslate"><span class="pre">setup()</span></code> aangeroepen en start
+de eigen taken. Het voorbeeld <code class="docutils literal notranslate"><span class="pre">MyTask</span></code> draait elke seconde:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">MyTask</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">pvParameters</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(;;)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// bijvoorbeeld: korte piep zolang ingang 1 actief is</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">DIN_Flag</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="w">      </span><span class="n">Buzzer_Open_Time</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">vTaskDelay</span><span class="p">(</span><span class="n">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">1000</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Geef taken die echt werk doen minimaal prioriteit 1 (<code class="docutils literal notranslate"><span class="pre">tskIDLE_PRIORITY</span> <span class="pre">+</span> <span class="pre">1</span></code>).
+Met prioriteit 0 draait een taak op hetzelfde niveau als de idle-taak.</p>
+</div>
+</section>
+<section id="opstartvolgorde">
+<h2>Opstartvolgorde<a class="headerlink" href="#opstartvolgorde" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">setup()</span></code> in <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code> initialiseert de modules in deze volgorde:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Flash_test()</span></code>: toont de flashgrootte</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GPIO_Init()</span></code>: RGB-led en zoemer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">I2C_Init()</span></code> en <code class="docutils literal notranslate"><span class="pre">RTC_Init()</span></code>: I²C-bus, PCF85063 en timer-events</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RS485_Init()</span></code> en <code class="docutils literal notranslate"><span class="pre">CAN_Init()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SD_Init()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WIFI_Init()</span></code>: AP of STA</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Bluetooth_Init()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ETH_Init()</span></code>: W5500 Ethernet en NTP-tijd</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DIN_Init()</span></code> en <code class="docutils literal notranslate"><span class="pre">Dout_Init()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">StartApplicationTasks()</span></code></p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">loop()</span></code> is leeg: al het werk gebeurt in FreeRTOS-taken.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Voettekst">
+        <a href="projects.html" class="btn btn-neutral float-left" title="Projecten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Vorige</a>
+        <a href="library.html" class="btn btn-neutral float-right" title="Library-referentie: waveshare_board" accesskey="n" rel="next">Volgende <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Gerard Harkema.</p>
+  </div>
+
+  Gebouwd met <a href="https://www.sphinx-doc.org/">Sphinx</a> met een
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thema</a>
+    geleverd door <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
